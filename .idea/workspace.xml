@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9af23c3-468d-4aa4-a3a6-b7001f78262d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,17 +12,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/training$Exercise4.ic" NAME="Exercise4 Coverage Results" MODIFIED="1524120135597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.training.basic.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Exercise3.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/basic/Exercise3.java">
+      <file leaf-file-name="Exercise4.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/basic/Exercise4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-              <folding>
-                <element signature="e#98#99#0" expanded="true" />
-                <element signature="e#120#121#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -48,6 +49,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise3.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise4.java" />
       </list>
     </option>
   </component>
@@ -141,7 +143,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Exercise3">
+  <component name="RunManager" selected="Application.Exercise4">
     <configuration name="Exercise1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.training.basic.Exercise1" />
       <module name="training" />
@@ -166,6 +168,17 @@
     </configuration>
     <configuration name="Exercise3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.training.basic.Exercise3" />
+      <module name="training" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.training.basic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
+    <configuration name="Exercise4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.training.basic.Exercise4" />
       <module name="training" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -232,9 +245,11 @@
       <item itemvalue="Application.Exercise1" />
       <item itemvalue="Application.Exercise2" />
       <item itemvalue="Application.Exercise3" />
+      <item itemvalue="Application.Exercise4" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Exercise4" />
         <item itemvalue="Application.Exercise3" />
         <item itemvalue="Application.Exercise2" />
         <item itemvalue="Application.Exercise1" />
@@ -261,7 +276,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32924107" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -269,6 +284,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33816963" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Floobits" order="7" weight="0.39174107" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32924107" />
       <window_info id="Capture Tool" order="2" />
@@ -499,12 +515,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/basic/Exercise3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#98#99#0" expanded="true" />
-            <element signature="e#120#121#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/basic/Exercise4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
         </state>
       </provider>
     </entry>
