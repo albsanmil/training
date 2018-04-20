@@ -1,6 +1,6 @@
 package com.training.model;
 
-public class Car {
+public class Car extends Vehicle {
 
     private static int numberOfCars = 0;
 
@@ -8,8 +8,6 @@ public class Car {
     private byte numSeats = 5;
     // Size 16 bits
     private short numCarpets = 4;
-    // Size 32 bits
-    private int numWheels = 4;
     // Size 64 bits
     private long numScrews = 1432897423L;
 
@@ -25,8 +23,8 @@ public class Car {
     private double temperatureEngine = 90.45;
 
 
-    public Car(int numWheels, String colour) {
-        this.numWheels = numWheels;
+    public Car(String serialNumber, int numWheels, String colour) {
+        super(serialNumber, numWheels);
         this.colour = colour;
         ++numberOfCars;
     }
@@ -45,14 +43,6 @@ public class Car {
 
     public void setNumCarpets(short numCarpets) {
         this.numCarpets = numCarpets;
-    }
-
-    public int getNumWheels() {
-        return numWheels;
-    }
-
-    public void setNumWheels(int numWheels) {
-        this.numWheels = numWheels;
     }
 
     public long getNumScrews() {
