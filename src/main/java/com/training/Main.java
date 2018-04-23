@@ -4,6 +4,8 @@ import com.training.model.Car;
 import com.training.model.Motobike;
 import com.training.model.Vehicle;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,7 +14,6 @@ public class Main {
         System.out.println("Number of cars " + Car.getNumberOfCars());
 
         Car ferrari = new Car("SN1", 4, "blue");
-//        ferrari.setColour("blue");
         System.out.println("Ferrari - wheels: " + ferrari.getNumWheels() + ", colour: " + ferrari.getColour());
 
         System.out.println("Number of cars " + Car.getNumberOfCars());
@@ -29,5 +30,19 @@ public class Main {
                 + suzuki.getDisplacement()
                 + ", chain size: "
                 + suzuki.getChainSize());
+
+        int[] integers = new int[10];
+        integers[0] = 5;
+        integers[3] = 9;
+        char[] chars = {'a', 'b', 'c'};
+        Vehicle[] cars = new Car[2];
+        cars[0] = ferrari;
+        cars[1] = fiat;
+
+        System.out.println(Arrays.toString(integers));
+        System.out.println(Arrays.toString(chars));
+        System.out.println(integers[3]);
+
+        System.out.println(Arrays.toString(cars));
     }
 }

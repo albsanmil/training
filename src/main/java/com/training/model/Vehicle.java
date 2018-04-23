@@ -28,4 +28,12 @@ public class Vehicle {
     public void setNumWheels(int numWheels) {
         this.numWheels = numWheels;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", numWheels=" + numWheels +
+                '}';
+    }
 }

@@ -88,4 +88,17 @@ public class Car extends Vehicle {
     public static int getNumberOfCars() {
         return numberOfCars;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "numSeats=" + numSeats +
+                ", numCarpets=" + numCarpets +
+                ", numScrews=" + numScrews +
+                ", model=" + model +
+                ", colour='" + colour + '\'' +
+                ", price=" + price +
+                ", temperatureEngine=" + temperatureEngine +
+                '}';
+    }
 }
