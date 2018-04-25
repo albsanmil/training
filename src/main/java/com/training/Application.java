@@ -6,9 +6,12 @@ import com.training.model.Vehicle;
 
 import java.util.Arrays;
 
-public class Main {
+public class Application {
 
     public static void main(String[] args) {
+        Vehicle vehicle = new Car("SN2", 4, "yellow");
+        Vehicle vehicle1 = new Motobike("SN3", 2, 125, 500);
+
         System.out.println("Hello world!!!");
 
         System.out.println("Number of cars " + Car.getNumberOfCars());

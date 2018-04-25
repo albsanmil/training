@@ -1,6 +1,8 @@
 package com.training.model;
 
-public class Car extends Vehicle {
+import com.training.Drivable;
+
+public class Car extends Vehicle implements Drivable {
 
     private static int numberOfCars = 0;
 
@@ -100,5 +102,10 @@ public class Car extends Vehicle {
                 ", price=" + price +
                 ", temperatureEngine=" + temperatureEngine +
                 '}';
+    }
+
+    @Override
+    public void drive() {
+        System.out.println("I am driving");
     }
 }
