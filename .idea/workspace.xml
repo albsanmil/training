@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9af23c3-468d-4aa4-a3a6-b7001f78262d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise9.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/Learning.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/util/IntegersUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/training/util/SpeedUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise12.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/datatypes/Exercise7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/datatypes/Exercise7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/datatypes/Exercise9.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/datatypes/Exercise9.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +35,8 @@
       <file leaf-file-name="Exercise9.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/training/basic/Exercise9.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+            <state relative-caret-position="124">
+              <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -85,6 +92,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -151,7 +159,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,13 +318,13 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33705357" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33705357" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Floobits" order="7" weight="0.390625" />
+      <window_info anchor="bottom" id="Floobits" order="7" visible="true" weight="0.390625" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.328125" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22547974" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22761194" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -677,8 +684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/training/basic/Exercise9.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+        <state relative-caret-position="124">
+          <caret line="55" column="44" lean-forward="true" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
         </state>
       </provider>
     </entry>

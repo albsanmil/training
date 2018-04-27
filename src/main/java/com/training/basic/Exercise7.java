@@ -1,4 +1,4 @@
-package com.training.basic;
+package com.training.datatypes;
 
 import java.util.Scanner;
 

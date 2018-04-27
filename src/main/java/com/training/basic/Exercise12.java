@@ -20,7 +20,7 @@ public class Exercise12 {
         thirdNumber = introNumber.nextInt();
         System.out.println("____________________________________________");
         System.out.println(firstNumber);
-        System.out.println("The average of the three numbers is: " + average(firstNumber, secondNumber, thirdNumber));
+        System.out.println("The calculateAverage of the three numbers is: " + average(firstNumber, secondNumber, thirdNumber));
         System.out.println(firstNumber);
 
 
