@@ -42,6 +42,10 @@ public class Application {
         cars[0] = ferrari;
         cars[1] = fiat;
 
+        for (Vehicle v : cars) {
+            System.out.println(v.getNumWheels());
+        }
+
         System.out.println(Arrays.toString(integers));
         System.out.println(Arrays.toString(chars));
         System.out.println(integers[3]);
