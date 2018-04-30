@@ -1,6 +1,6 @@
 package com.training.basic;
 
-public class Exercise10 {
+public class B_Exercise10 {
 
     public static void main(String[] args) {
 

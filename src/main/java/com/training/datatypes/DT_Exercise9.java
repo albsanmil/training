@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import static com.training.util.IntegersUtil.*;
 
-public class Exercise9 {
+public class DT_Exercise9 {
 
     public static void main(String[] args) {
         Scanner introNumber = new Scanner(System.in);

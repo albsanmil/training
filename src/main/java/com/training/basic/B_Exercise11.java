@@ -1,6 +1,12 @@
 package com.training.basic;
 
-public class Exercise11 {
+/**
+ * Exercise 11 for ....
+ *
+ *
+ *
+ */
+public class B_Exercise11 {
 
     private static final float PI = 3.14159F;
 

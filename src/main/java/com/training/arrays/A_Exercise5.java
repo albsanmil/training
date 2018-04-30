@@ -2,7 +2,7 @@ package com.training.arrays;
 
 import java.util.Scanner;
 
-public class Exercise5 {
+public class A_Exercise5 {
 
     public static void main(String[] args) {
 

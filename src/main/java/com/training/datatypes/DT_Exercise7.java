@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import static com.training.util.SpeedUtil.*;
 
-public class Exercise7 {
+public class DT_Exercise7 {
 
     public static void main(String[] args) {
         Scanner introNumber = new Scanner(System.in);

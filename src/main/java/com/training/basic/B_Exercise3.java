@@ -1,6 +1,6 @@
 package com.training.basic;
 
-public class Exercise3 {
+public class B_Exercise3 {
 
     public static void main(String[] args) {
         System.out.println(division(50, 3));

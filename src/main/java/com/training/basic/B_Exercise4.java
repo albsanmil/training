@@ -1,6 +1,6 @@
 package com.training.basic;
 
-public class Exercise4 {
+public class B_Exercise4 {
 
     public static void main(String[] args) {
         System.out.println(calculoA(-5, 8, 6));

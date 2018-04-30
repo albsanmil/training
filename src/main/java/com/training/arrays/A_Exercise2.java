@@ -1,6 +1,6 @@
 package com.training.arrays;
 
-public class Exercise2 {
+public class A_Exercise2 {
 
     public static void main(String[] args) {
         int[] integers = {55, 44, 33, 22, 11};

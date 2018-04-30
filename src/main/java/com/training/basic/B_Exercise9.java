@@ -2,7 +2,7 @@ package com.training.datatypes;
 
 import java.util.Scanner;
 
-public class Exercise9 {
+public class B_Exercise9 {
 
     public static void main(String[] args) {
 
