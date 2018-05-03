@@ -18,6 +18,12 @@ public class ShapeUtil {
         }
     }
 
+    public static void printPerimeter(Shape[] shapes) {
+        for (Shape shape : shapes) {
+            System.out.println(shape.displayPerimeter());
+        }
+    }
+
 //    public static Shape[] searchShapesByType(Shape[] shapes) {
 //
 //    }

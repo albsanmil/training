@@ -28,4 +28,14 @@ public final class Rectangle extends Shape {
     public String displayArea() {
         return "Area of rectangle of height " + height + " and width " + width + " = " + area();
     }
+
+    @Override
+    public double perimeter() {
+        return (2 * height) + (2 * width);
+    }
+
+    @Override
+    public String displayPerimeter() {
+        return "Perimeter of rectangle of heigth " + height + "and width " + width + " = " + perimeter();
+    }
 }

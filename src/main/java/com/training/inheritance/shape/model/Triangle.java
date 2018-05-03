@@ -21,4 +21,14 @@ public final class Triangle extends Shape {
     public String displayArea() {
         return "Area of triangle of side " + side + " = " + area();
     }
+
+    @Override
+    public double perimeter() {
+        return side + side + side;
+    }
+
+    @Override
+    public String displayPerimeter() {
+        return "Perimeter of triangle of side " + side + " = " + perimeter();
+    }
 }

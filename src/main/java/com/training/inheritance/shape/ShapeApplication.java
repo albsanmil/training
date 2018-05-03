@@ -43,6 +43,8 @@ public class ShapeApplication {
         shapes[10] = firstPentagon;
 
         ShapeUtil.printAreas(shapes);
+        System.out.println("________________________________________________________\n");
+        ShapeUtil.printPerimeter(shapes);
 
 
     }

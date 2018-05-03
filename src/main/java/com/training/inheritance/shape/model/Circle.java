@@ -23,4 +23,14 @@ public final class Circle extends Shape {
     public String displayArea() {
         return "Area of circle of radius " + radius + " = " + area();
     }
+
+    @Override
+    public double perimeter() {
+        return 2 * PI * radius;
+    }
+
+    @Override
+    public String displayPerimeter() {
+        return "Perimeter of circle of radius " + radius + " = " + perimeter();
+    }
 }

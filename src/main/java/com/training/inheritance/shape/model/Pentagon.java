@@ -21,4 +21,14 @@ public final class Pentagon extends Shape {
     public String displayArea() {
         return "Area of pentagon of side " + side + " = " + area();
     }
+
+    @Override
+    public double perimeter() {
+        return 5 * side;
+    }
+
+    @Override
+    public String displayPerimeter() {
+        return "Perimeter of pentagon of side " + side  + " = " + perimeter();
+    }
 }
