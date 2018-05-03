@@ -53,9 +53,14 @@ public class ShapeApplication {
         for (Shape shape : searchResult) {
             System.out.println(shape.displayArea());
             System.out.println(shape.displayPerimeter());
-            System.out.println("___________");
         }
 
+        System.out.println("________________________________________________________\n");
+        searchResult = ShapeUtil.searchShapesByType(shapes, firstTriangle);
+        for (Shape shape : searchResult) {
+            System.out.println(shape.displayArea());
+            System.out.println(shape.displayPerimeter());
+        }
 
     }
 
