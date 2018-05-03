@@ -3,6 +3,8 @@ package com.training.inheritance.shape;
 import com.training.inheritance.shape.model.*;
 import com.training.inheritance.shape.util.ShapeUtil;
 
+import java.util.List;
+
 public class ShapeApplication {
 
     public static void main(String[] args) {
@@ -46,11 +48,16 @@ public class ShapeApplication {
         System.out.println("________________________________________________________\n");
         ShapeUtil.printPerimeter(shapes);
 
+        System.out.println("________________________________________________________\n");
+        List<Shape> searchResult = ShapeUtil.searchShapesByType(shapes, firstRectangle);
+        for (Shape shape : searchResult) {
+            System.out.println(shape.displayArea());
+            System.out.println(shape.displayPerimeter());
+            System.out.println("___________");
+        }
+
 
     }
 
-//    private Shape[] searchShapesByType(Class clazz) {
-//        if (clazz instanceof )
-//
-//    }
+
 }

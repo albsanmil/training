@@ -1,6 +1,9 @@
 package com.training.inheritance.shape.util;
 
-import com.training.inheritance.shape.model.Shape;
+import com.training.inheritance.shape.model.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ShapeUtil {
 
@@ -24,7 +27,17 @@ public class ShapeUtil {
         }
     }
 
-//    public static Shape[] searchShapesByType(Shape[] shapes) {
-//
-//    }
+    public static List<Shape> searchShapesByType(Shape[] shapes, Shape shapeToSearch) {
+        List<Shape> result = new ArrayList<>();
+        for (Shape shape : shapes) {
+            if ((shape instanceof Square && shapeToSearch instanceof Square)
+                    || (shape instanceof Rectangle && shapeToSearch instanceof Rectangle)
+                    || (shape instanceof Triangle && shapeToSearch instanceof Triangle)
+                    || (shape instanceof Circle && shapeToSearch instanceof Circle)
+                    || (shape instanceof Pentagon && shapeToSearch instanceof Pentagon)) {
+                result.add(shape);
+            }
+        }
+        return result;
+    }
 }
