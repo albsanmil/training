@@ -1,4 +1,4 @@
-package com.training.basic;
+package com.training.exercise.basic;
 
 /**
  * Exercise 11 for ....

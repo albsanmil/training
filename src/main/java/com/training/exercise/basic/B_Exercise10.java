@@ -1,4 +1,4 @@
-package com.training.basic;
+package com.training.exercise.basic;
 
 public class B_Exercise10 {
 

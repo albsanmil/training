@@ -1,4 +1,4 @@
-package com.training.arrays;
+package com.training.exercise.arrays;
 
 import java.util.Scanner;
 
