@@ -37,15 +37,23 @@ public class ShapeUtil {
         return result;
     }
 
-    public static double sumTotalArae(Shape[] shapes, double height) {
+    // Calculates the total area of all the given shapes which height is
+    // less or equal than the given height
+    public static double calculateTotalArea(List<Shape> shapes) {
         double sumTotal = 0;
         for (Shape shape : shapes) {
-            if (shape.height() <= height) {
-                System.out.println(shape.getClass() + "    " + " Area: " + shape.area()
-                        + "    " + " Altura: " + shape.height());
-                sumTotal += shape.area();
-            }
+            sumTotal += shape.area();
         }
         return sumTotal;
+    }
+
+    public static List<Shape> filterShapesByMaximumHeight(Shape[] shapes, double maximumHeight) {
+        List<Shape> filteredShapes = new ArrayList<>();
+        for (Shape shape : shapes) {
+            if (shape.height() <= maximumHeight) {
+                filteredShapes.add(shape);
+            }
+        }
+        return filteredShapes;
     }
 }

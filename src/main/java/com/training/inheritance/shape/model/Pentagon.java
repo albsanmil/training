@@ -1,5 +1,7 @@
 package com.training.inheritance.shape.model;
 
+import com.google.common.base.Joiner;
+
 public final class Pentagon extends Shape {
 
     private final int side;
@@ -35,6 +37,11 @@ public final class Pentagon extends Shape {
     @Override
     public double height() {
         return ((side / 2) * (Math.sqrt(5 + 2 * Math.sqrt(5))));
+    }
+
+    @Override
+    public String toString() {
+        return Joiner.on(" ").join("Pentagon { side =", side, "| height =", height(), "| area =", area(), '}');
     }
 }
 

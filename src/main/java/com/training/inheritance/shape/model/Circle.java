@@ -1,5 +1,7 @@
 package com.training.inheritance.shape.model;
 
+import com.google.common.base.Joiner;
+
 public final class Circle extends Shape {
 
     private static final double PI = 3.14159;
@@ -37,5 +39,10 @@ public final class Circle extends Shape {
     @Override
     public double height() {
         return 2 * radius;
+    }
+
+    @Override
+    public String toString() {
+        return Joiner.on(" ").join("Circle { radius =", radius, "| height =", height(), "| area =", area(), '}');
     }
 }

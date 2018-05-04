@@ -1,5 +1,7 @@
 package com.training.inheritance.shape.model;
 
+import com.google.common.base.Joiner;
+
 public final class Rectangle extends Shape {
 
     private final double height;
@@ -42,5 +44,10 @@ public final class Rectangle extends Shape {
     @Override
     public double height() {
         return height;
+    }
+
+    @Override
+    public String toString() {
+        return Joiner.on(" ").join("Rectangle { width =", width, "| height =", height(), "| area =", area(), '}');
     }
 }

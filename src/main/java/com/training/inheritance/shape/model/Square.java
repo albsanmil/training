@@ -1,5 +1,7 @@
 package com.training.inheritance.shape.model;
 
+import com.google.common.base.Joiner;
+
 public final class Square extends Shape {
 
     private final double side;
@@ -35,5 +37,10 @@ public final class Square extends Shape {
     @Override
     public double height() {
         return side;
+    }
+
+    @Override
+    public String toString() {
+        return Joiner.on(" ").join("Square { side =", side, "| height =", height(), "| area =", area(), '}');
     }
 }

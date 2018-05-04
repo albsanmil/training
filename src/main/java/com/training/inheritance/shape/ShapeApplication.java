@@ -65,10 +65,13 @@ public class ShapeApplication {
 
         System.out.println("________________________________________________________\n");
         Scanner introHeight = new Scanner(System.in);
-        System.out.print("Enter a height: ");
-        double height = introHeight.nextInt();
-        System.out.println("\nThe sum total of the areas of the objects with height less than or equal to "
-                + height + " is: " + ShapeUtil.sumTotalArae(shapes, height));
+        System.out.print("Enter the maximum height: ");
+        double maximumHeight = introHeight.nextInt();
+        List<Shape> filteredShapes = ShapeUtil.filterShapesByMaximumHeight(shapes, maximumHeight);
+        filteredShapes.stream().forEach(shape -> System.out.println(shape));
+
+        System.out.println("\nThe total area of all the shapes with height is less or equal than "
+                + maximumHeight + " is: " + ShapeUtil.calculateTotalArea(filteredShapes));
     }
 
 
