@@ -36,4 +36,16 @@ public class ShapeUtil {
         }
         return result;
     }
+
+    public static double sumTotalArae(Shape[] shapes, double height) {
+        double sumTotal = 0;
+        for (Shape shape : shapes) {
+            if (shape.height() <= height) {
+                System.out.println(shape.getClass() + "    " + " Area: " + shape.area()
+                        + "    " + " Altura: " + shape.height());
+                sumTotal += shape.area();
+            }
+        }
+        return sumTotal;
+    }
 }

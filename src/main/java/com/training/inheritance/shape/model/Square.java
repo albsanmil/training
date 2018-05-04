@@ -31,4 +31,9 @@ public final class Square extends Shape {
     public String displayPerimeter() {
         return "Perimeter of square of side " + side + " = " + perimeter();
     }
+
+    @Override
+    public double height() {
+        return side;
+    }
 }

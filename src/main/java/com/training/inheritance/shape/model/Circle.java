@@ -33,4 +33,9 @@ public final class Circle extends Shape {
     public String displayPerimeter() {
         return "Perimeter of circle of radius " + radius + " = " + perimeter();
     }
+
+    @Override
+    public double height() {
+        return 2 * radius;
+    }
 }

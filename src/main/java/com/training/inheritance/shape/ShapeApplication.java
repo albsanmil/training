@@ -4,6 +4,7 @@ import com.training.inheritance.shape.model.*;
 import com.training.inheritance.shape.util.ShapeUtil;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class ShapeApplication {
 
@@ -12,7 +13,7 @@ public class ShapeApplication {
 
         Rectangle firstRectangle = new Rectangle(12, 18);
         Square firstSquare = new Square(5);
-        Circle firstCircle = new Circle(19);
+        Circle firstCircle = new Circle(7);
         Triangle firstTriangle = new Triangle(41);
 
 //        System.out.println(ShapeUtil.calculateSquareArea(firstSquare));
@@ -62,6 +63,12 @@ public class ShapeApplication {
             System.out.println(shape.displayPerimeter());
         }
 
+        System.out.println("________________________________________________________\n");
+        Scanner introHeight = new Scanner(System.in);
+        System.out.print("Enter a height: ");
+        double height = introHeight.nextInt();
+        System.out.println("\nThe sum total of the areas of the objects with height less than or equal to "
+                + height + " is: " + ShapeUtil.sumTotalArae(shapes, height));
     }
 
 

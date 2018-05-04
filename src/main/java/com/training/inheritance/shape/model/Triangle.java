@@ -31,4 +31,9 @@ public final class Triangle extends Shape {
     public String displayPerimeter() {
         return "Perimeter of triangle of side " + side + " = " + perimeter();
     }
+
+    @Override
+    public double height() {
+        return ((Math.sqrt(3.0F) * side) / 2);
+    }
 }

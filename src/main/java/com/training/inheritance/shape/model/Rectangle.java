@@ -38,4 +38,9 @@ public final class Rectangle extends Shape {
     public String displayPerimeter() {
         return "Perimeter of rectangle of height " + height + " and width " + width + " = " + perimeter();
     }
+
+    @Override
+    public double height() {
+        return height;
+    }
 }
