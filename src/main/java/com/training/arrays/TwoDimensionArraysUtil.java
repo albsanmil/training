@@ -59,4 +59,43 @@ public class TwoDimensionArraysUtil {
         return total;
 
     }
+
+    /**
+     * For the given two dimension array, return the sum of each row in an array of integers.
+     *
+     * @param integers the two dimension array
+     * @return An array with the sum of each row
+     * @exception "The array of the sum of the rows is incorrect"
+     */
+
+    public static int[] allRowsSums(int[][] integers) {
+        int[] totalRowsResutl = new int[3];
+        for (int i = 0; i < totalRowsResutl.length; i++) {
+            totalRowsResutl[i] = rowSum(integers, i);
+        }
+        return totalRowsResutl;
+    }
+
+    /**
+     * For the given two dimension array, return true if it's rows magic array.
+     *
+     * @param rowMagic the two dimension array
+     * @return true if it's rows magic array
+     * @exception "Wrong result because it's not a magic rows array"
+     */
+
+    public static boolean isArrayRowMagic(int[][] rowMagic) {
+        int[] rowTemp = new int[3];
+
+        for (int i = 0; i < rowMagic.length; i++) {
+            rowTemp[i] = rowSum(rowMagic, i);
+        }
+        if (rowTemp[0] == rowTemp[1] && rowTemp[1] == rowTemp[2]) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 }

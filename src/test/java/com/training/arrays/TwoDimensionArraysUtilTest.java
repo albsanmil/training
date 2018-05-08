@@ -19,6 +19,8 @@ class TwoDimensionArraysUtilTest {
 
     private static int[][] negativeIntegers = new int[][]{{-1, -1, -2, -3}, {-4, -5, -6, -7}, {-8, -9, -10, -11}};
 
+    private static int[][] rowMagic = new int[][]{{2, 7, 6}, {8, 4, 3}, {0, 6, 9}};
+
     @BeforeAll
     static void setUp() {
         subject = new TwoDimensionArraysUtil();
@@ -59,5 +61,20 @@ class TwoDimensionArraysUtilTest {
         int result = subject.columnSum(integers, columnIndexInRange);
 
         assertEquals(14, result, "Wrong sum of integers in the third column");
+    }
+
+    @Test
+    void given_TwoDimensionArray_when_allRowsSumsIsCalled_then_totalRowsIsReturnedInArray() {
+        int[] totalRowsResult = {2, 22, 38};
+        int[] result = subject.allRowsSums(integers);
+
+        assertEquals(totalRowsResult, result, "The array of the sum of the rows is incorrect");
+    }
+
+    @Test
+    void given_TwoDimensionArray_when_isArrayRowMagicIsCalled_then_trueIsReturned() {
+        boolean result = subject.isArrayRowMagic(rowMagic);
+
+        assertEquals(true, result, "Wrong result because it's not a magic rows array");
     }
 }
