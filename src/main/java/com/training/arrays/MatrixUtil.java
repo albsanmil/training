@@ -1,5 +1,7 @@
 package com.training.arrays;
 
+import static com.google.common.base.Preconditions.checkArgument;
+
 public class MatrixUtil {
 
     /**
@@ -12,9 +14,39 @@ public class MatrixUtil {
      */
     public static int rowSum(int[][] integerMatrix, int rowIndex) {
         int total = 0;
-        int[] row = integerMatrix[rowIndex];
-        for (int i = 0; i < row.length; i++) {
-            total += row[i];
+        if (integerMatrix.length > 0) {
+            int[] row = integerMatrix[rowIndex];
+            for (int i = 0; i < row.length; i++) {
+                total += row[i];
+            }
+        }
+        return total;
+    }
+
+    /**
+     * For the given matrix, returns the sum of all the integers in the column positioned by the given index.
+     *
+     * @param integerMatrix the matrix of integers
+     * @param columnIndex the index of the column
+     * @return the sum of all the integers in the given column
+     */
+    public static int columnSum(int[][] integerMatrix, int columnIndex) {
+        checkArgument(columnIndex >= 0, "Column index should be greater or equals than zero");
+
+        int total = 0;
+        if (integerMatrix.length > 0) {
+            for (int i = 0; i < integerMatrix.length; i++) {
+                for (int j = 0; j < integerMatrix.length; j++) {
+                    if (j == columnIndex) {
+                        try {
+                            total += integerMatrix[i][j];
+                        }
+                        catch (ArrayIndexOutOfBoundsException e) {
+                            // For the current row, the element in the given column does not exist
+                        }
+                    }
+                }
+            }
         }
         return total;
     }
@@ -36,26 +68,6 @@ public class MatrixUtil {
             }
         }
         return maxValue;
-    }
-
-    /**
-     * For the given matrix, returns the sum of all the integers in the column positioned by the given index.
-     *
-     * @param integerMatrix the matrix of integers
-     * @param columnIndex the index of the column
-     * @return the sum of all the integers in the given column
-     */
-    public static int columnSum(int[][] integerMatrix, int columnIndex) {
-        int total = 0;
-        for (int i = 0; i < integerMatrix.length; i++) {
-            for (int j = 0; j < integerMatrix.length; j++) {
-                if (j == columnIndex) {
-                    total += integerMatrix[i][j];
-                }
-            }
-        }
-        return total;
-
     }
 
     /**
