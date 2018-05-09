@@ -105,11 +105,14 @@ class MatrixUtilTest {
     }
 
     @Test
-    void given_SquareMatrixWithAllIntegersNegative_when_maxIsCalled_then_maxValueIsReturned() {
+    void given_SquareMatrixWithAllNegative_when_maxIsCalled_then_maxValueIsReturned() {
         int result = subject.max(squareMatrixNegative);
 
         assertEquals(-5, result, "Could not find the maximum integer in the matrix");
     }
+//    Que pasa con matriz vacia
+//    @Test
+//    void given_EmptySquareMatrix
 
     @Test
     void given_SquareMatrix_when_allRowsSumsIsCalled_then_totalRowsIsReturnedInArray() {
@@ -120,14 +123,33 @@ class MatrixUtilTest {
         int EXPECTED_SUM_THIRD_ROW = 38;
         int EXPECTED_SUM_FOURTH_ROW = -26;
 
-        assertEquals(EXPECTED_SUM_FIRST_ROW, result[0], "The array of the sum of the rows is incorrect");
-        assertEquals(EXPECTED_SUM_SECOND_ROW, result[1], "The array of the sum of the rows is incorrect");
-        assertEquals(EXPECTED_SUM_THIRD_ROW, result[2], "The array of the sum of the rows is incorrect");
-        assertEquals(EXPECTED_SUM_FOURTH_ROW, result[3], "The array of the sum of the rows is incorrect");
+        assertEquals(EXPECTED_SUM_FIRST_ROW, result[0], "The sum of the integers in the first row is incorrect");
+        assertEquals(EXPECTED_SUM_SECOND_ROW, result[1], "The sum of the integers in second row is incorrect");
+        assertEquals(EXPECTED_SUM_THIRD_ROW, result[2], "The sum of the integers in third row is incorrect");
+        assertEquals(EXPECTED_SUM_FOURTH_ROW, result[3], "The sum of the integers in forrth row is incorrect");
     }
 
     @Test
-    void given_SquareMatrix_when_isArrayRowMagicIsCalled_then_trueIsReturned() {
+    void given_IrregularMatrix_when_allRowsSumsIsCalled_then_totalRowsIsReturnedInArray() {
+        int[] result = subject.allRowsSums(irregularMatrix);
+
+        int EXPECTED_SUM_FIRST_ROW = 2;
+        int EXPECTED_SUM_SECOND_ROW = -1;
+        int EXPECTED_SUM_THIRD_ROW = 38;
+        int EXPECTED_SUM_FOURTH_ROW = -18;
+
+        assertEquals(EXPECTED_SUM_FIRST_ROW, result[0], "The sum of the integers in the first row is incorrect");
+        assertEquals(EXPECTED_SUM_SECOND_ROW, result[1], "The sum of the integers in second row is incorrect");
+        assertEquals(EXPECTED_SUM_THIRD_ROW, result[2], "The sum of the integers in third row is incorrect");
+        assertEquals(EXPECTED_SUM_FOURTH_ROW, result[3], "The sum of the integers in fourth row is incorrect");
+    }
+
+
+    //Que pasa si la matriz es irregular, vacia
+
+
+    @Test
+    void given_RowMagicMatrix_when_isRowMagicIsCalled_then_trueIsReturned() {
         boolean result = subject.isRowMagic(rowMagic);
 
         assertEquals(true, result, "Wrong result because it's not a magic rows array");
