@@ -1,10 +1,10 @@
-package com.training.exercise.collections;
+package com.training.exercise.collections.arraylist;
 
 import java.util.ArrayList;
 import java.util.List;
 
 // 3. Write a Java program to insert an element into the array list at the first position.
-public class C_Exercise3 {
+public class AL_Exercise3 {
 
     public static void main(String[] args) {
         List<String> animals = new ArrayList<>();

@@ -1,22 +1,22 @@
-package com.training.exercise.collections;
+package com.training.exercise.collections.arraylist;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 // 5. Write a Java program to update specific array element by given element.
-public class C_Exercise5 {
+public class AL_Exercise5 {
 
     public static void main(String[] args) {
-        List<Integer> integersList = new ArrayList<>();
+        List<Integer> integers = new ArrayList<>();
 
-        integersList.add(0, 9);
-        integersList.add(1, 10);
-        integersList.add(2, 11);
-        integersList.add(3, 12);
-        integersList.add(4, 13);
-        integersList.add(5, 14);
-        System.out.println(integersList);
+        integers.add(9);
+        integers.add(10);
+        integers.add(11);
+        integers.add(12);
+        integers.add(13);
+        integers.add(14);
+        System.out.println(integers);
 
         Scanner enterIndex = new Scanner(System.in);
         System.out.print("Enter the index of the list where you want to update: ");
@@ -28,8 +28,7 @@ public class C_Exercise5 {
 
         System.out.println("________________________________________");
 
-        integersList.add(index, element);
-        integersList.remove(index + 1);
-        System.out.println(integersList);
+        integers.set(index, element);
+        System.out.println(integers);
     }
 }
