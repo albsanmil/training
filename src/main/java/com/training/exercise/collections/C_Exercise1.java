@@ -15,6 +15,10 @@ public class C_Exercise1 {
 
         System.out.println(colors);
         System.out.println(colors.size());
+        System.out.println(colors.get(1));
+        System.out.println(colors.remove(3));
+        //System.out.println(colors.isEmpty());
+        System.out.println(colors);
 
     }
 }
