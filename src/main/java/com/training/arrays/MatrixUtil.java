@@ -76,9 +76,8 @@ public class MatrixUtil {
      * @param integerMatrix the matrix of integers
      * @return an array with the sum of each row
      */
-
     public static int[] allRowsSums(int[][] integerMatrix) {
-        int[] totalRowsResutl = new int[3];
+        int[] totalRowsResutl = new int[integerMatrix.length];
         for (int i = 0; i < totalRowsResutl.length; i++) {
             totalRowsResutl[i] = rowSum(integerMatrix, i);
         }
@@ -91,9 +90,8 @@ public class MatrixUtil {
      * @param integerMatrix the matrix of integers
      * @return true if the matrix is row magic, false otherwise
      */
-
     public static boolean isRowMagic(int[][] integerMatrix) {
-        int[] rowTemp = new int[3];
+        int[] rowTemp = new int[integerMatrix.length];
 
         for (int i = 0; i < integerMatrix.length; i++) {
             rowTemp[i] = rowSum(integerMatrix, i);

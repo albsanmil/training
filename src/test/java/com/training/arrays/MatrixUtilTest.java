@@ -19,6 +19,13 @@ class MatrixUtilTest {
     private static int[][] squareMatrix = new int[][]{{0, 1, -2, 3}, {4, -5, 6, 7}, {8, 9, 10, 11}, {-5, -6, -7, -8}};
 
     /*
+     *   -8  -7  -9  -5
+     *   -7  -5  -6  -7
+     *   -8  -9 -10 -11
+     *   -5  -6  -7  -8
+     */
+    private static int[][] squareMatrixNegative = new int[][]{{-8, -7, -9, -5}, {-7, -5, -6, -7}, {-8, -9, -10, -11}, {-5, -6, -7, -8}};
+    /*
      *    0   1  -2   3
      *    4  -5
      *    8   9  10  11
@@ -26,7 +33,7 @@ class MatrixUtilTest {
      */
     private static int[][] irregularMatrix = new int[][]{{0, 1, -2, 3}, {4, -5}, {8, 9, 10, 11}, {-5, -6, -7}};
 
-    private static int[][] rowMagic = new int[][]{{2, 7, 6}, {8, 4, 3}, {0, 6, 9}};
+    private static int[][] rowMagic = new int[][]{{2, 7, 6}, {8, 4, 3}, {12, -6, 9}};
 
     @BeforeAll
     static void setUp() {
@@ -98,13 +105,25 @@ class MatrixUtilTest {
     }
 
     @Test
+    void given_SquareMatrixWithAllIntegersNegative_when_maxIsCalled_then_maxValueIsReturned() {
+        int result = subject.max(squareMatrixNegative);
+
+        assertEquals(-5, result, "Could not find the maximum integer in the matrix");
+    }
+
+    @Test
     void given_SquareMatrix_when_allRowsSumsIsCalled_then_totalRowsIsReturnedInArray() {
         int[] result = subject.allRowsSums(squareMatrix);
 
-        int EXPECTED_SUM_FIRST_ROW = 12;
+        int EXPECTED_SUM_FIRST_ROW = 2;
+        int EXPECTED_SUM_SECOND_ROW = 12;
+        int EXPECTED_SUM_THIRD_ROW = 38;
+        int EXPECTED_SUM_FOURTH_ROW = -26;
 
         assertEquals(EXPECTED_SUM_FIRST_ROW, result[0], "The array of the sum of the rows is incorrect");
-
+        assertEquals(EXPECTED_SUM_SECOND_ROW, result[1], "The array of the sum of the rows is incorrect");
+        assertEquals(EXPECTED_SUM_THIRD_ROW, result[2], "The array of the sum of the rows is incorrect");
+        assertEquals(EXPECTED_SUM_FOURTH_ROW, result[3], "The array of the sum of the rows is incorrect");
     }
 
     @Test
