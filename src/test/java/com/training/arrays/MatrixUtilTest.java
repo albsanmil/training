@@ -144,6 +144,17 @@ class MatrixUtilTest {
         assertEquals(EXPECTED_SUM_FOURTH_ROW, result[3], "The sum of the integers in fourth row is incorrect");
     }
 
+    @Test
+    void given_EmptyIrregularMatrix_when_allRowsSumsIsCalled_then_wrongIsReturned() {
+        int[][] emptyMatrix = new int[][]{};
+
+        int[] result = subject.allRowsSums(emptyMatrix);
+
+        //assertEquals(null, result, "The sum of integers of any row in an empty array must be zero");
+        assertThrows(ArrayStoreException.class, () -> subject.allRowsSums(emptyMatrix));
+
+    }
+
 
     //Que pasa si la matriz es irregular, vacia
 

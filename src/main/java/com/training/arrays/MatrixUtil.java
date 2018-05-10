@@ -103,5 +103,4 @@ public class MatrixUtil {
             return false;
         }
     }
-
 }
