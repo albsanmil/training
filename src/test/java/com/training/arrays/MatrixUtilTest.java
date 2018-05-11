@@ -34,6 +34,10 @@ class MatrixUtilTest {
 
     private static int[][] rowMagic = new int[][]{{2, 7, 6}, {8, 4, 3}, {12, -6, 9}};
 
+    private static int[][] rowMagicNegative = new int[][]{{-5, -6, -4}, {-8, -6, -1}, {-1, -13, -1}};
+
+    private static int[][] emptyMatrix = new int[][]{};
+
     @BeforeAll
     static void setUp() {
         subject = new MatrixUtil();
@@ -142,7 +146,7 @@ class MatrixUtilTest {
 
     @Test
     void given_EmptyMatrix_when_allRowsSumsIsCalled_then_noSumIsReturned() {
-        int[][] emptyMatrix = new int[][]{};
+        //int[][] emptyMatrix = new int[][]{};
 
         int[] result = subject.allRowsSums(emptyMatrix);
 
@@ -152,6 +156,20 @@ class MatrixUtilTest {
     @Test
     void given_RowMagicMatrix_when_isRowMagicIsCalled_then_trueIsReturned() {
         boolean result = subject.isRowMagic(rowMagic);
+
+        assertEquals(true, result, "Wrong result because it's not a magic rows array");
+    }
+
+    @Test
+    void given_EmptyMatrix_when_isRowMagicIsCalled_then_falseIsReturned() {
+        boolean result = subject.isRowMagic(emptyMatrix);
+
+        assertEquals(false, result, "The matrix is of magic rows");
+    }
+
+    @Test
+    void given_RowMagicMatrixWithAllNegative_when_isRowMagicIsCalled_then_trueIsReturned() {
+        boolean result = subject.isRowMagic(rowMagicNegative);
 
         assertEquals(true, result, "Wrong result because it's not a magic rows array");
     }
