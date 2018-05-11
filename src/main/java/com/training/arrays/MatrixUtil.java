@@ -95,20 +95,17 @@ public class MatrixUtil {
      * @return true if the matrix is row magic, false otherwise
      */
     public static boolean isRowMagic(int[][] integerMatrix) {
-        int[] rowTemp = new int[integerMatrix.length];
-
         if (integerMatrix.length == 0) {
             return false;
-        }
+        }refactor
 
-        for (int i = 0; i < integerMatrix.length; i++) {
-            rowTemp[i] = rowSum(integerMatrix, i);
+        int firstRowSum = rowSum(integerMatrix, 0);
+        for (int i = 1; i < integerMatrix.length; i++) {
+            int currentRowSum = rowSum(integerMatrix, i);
+            if (firstRowSum != currentRowSum) {
+                return false;
+            }
         }
-        if (rowTemp[0] == rowTemp[1] && rowTemp[1] == rowTemp[2]) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return true;
     }
 }

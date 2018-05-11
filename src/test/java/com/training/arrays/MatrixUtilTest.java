@@ -7,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MatrixUtilTest {
 
-    private static MatrixUtil subject;
-
     /*
      *    0   1  -2   3
      *    4  -5   6   7
@@ -34,9 +32,9 @@ class MatrixUtilTest {
 
     private static int[][] rowMagic = new int[][]{{2, 7, 6}, {8, 4, 3}, {12, -6, 9}};
 
-    private static int[][] rowMagicNegative = new int[][]{{-5, -6, -4}, {-8, -6, -1}, {-1, -13, -1}};
-
     private static int[][] emptyMatrix = new int[][]{};
+
+    private static MatrixUtil subject;
 
     @BeforeAll
     static void setUp() {
@@ -157,20 +155,20 @@ class MatrixUtilTest {
     void given_RowMagicMatrix_when_isRowMagicIsCalled_then_trueIsReturned() {
         boolean result = subject.isRowMagic(rowMagic);
 
-        assertEquals(true, result, "Wrong result because it's not a magic rows array");
+        assertTrue(result, "Should return true for a row magic matrix");
+    }
+
+    @Test
+    void given_NonRowMagicMatrix_when_isRowMagicIsCalled_then_falseIsReturned() {
+        boolean result = subject.isRowMagic(squareMatrix);
+
+        assertFalse(result, "Should return false for a non row magic matrix");
     }
 
     @Test
     void given_EmptyMatrix_when_isRowMagicIsCalled_then_falseIsReturned() {
         boolean result = subject.isRowMagic(emptyMatrix);
 
-        assertEquals(false, result, "The matrix is of magic rows");
-    }
-
-    @Test
-    void given_RowMagicMatrixWithAllNegative_when_isRowMagicIsCalled_then_trueIsReturned() {
-        boolean result = subject.isRowMagic(rowMagicNegative);
-
-        assertEquals(true, result, "Wrong result because it's not a magic rows array");
+        assertFalse(result, "An empty matrix is not row magic");
     }
 }
