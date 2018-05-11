@@ -3,8 +3,7 @@ package com.training.arrays;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 class MatrixUtilTest {
 
@@ -110,12 +109,9 @@ class MatrixUtilTest {
 
         assertEquals(-5, result, "Could not find the maximum integer in the matrix");
     }
-//    Que pasa con matriz vacia
-//    @Test
-//    void given_EmptySquareMatrix
 
     @Test
-    void given_SquareMatrix_when_allRowsSumsIsCalled_then_totalRowsIsReturnedInArray() {
+    void given_SquareMatrix_when_allRowsSumsIsCalled_then_sumOfRowsIsReturned() {
         int[] result = subject.allRowsSums(squareMatrix);
 
         int EXPECTED_SUM_FIRST_ROW = 2;
@@ -130,7 +126,7 @@ class MatrixUtilTest {
     }
 
     @Test
-    void given_IrregularMatrix_when_allRowsSumsIsCalled_then_totalRowsIsReturnedInArray() {
+    void given_IrregularMatrix_when_allRowsSumsIsCalled_then_sumOfRowsIsReturned() {
         int[] result = subject.allRowsSums(irregularMatrix);
 
         int EXPECTED_SUM_FIRST_ROW = 2;
@@ -145,19 +141,13 @@ class MatrixUtilTest {
     }
 
     @Test
-    void given_EmptyIrregularMatrix_when_allRowsSumsIsCalled_then_wrongIsReturned() {
+    void given_EmptyMatrix_when_allRowsSumsIsCalled_then_noSumIsReturned() {
         int[][] emptyMatrix = new int[][]{};
 
         int[] result = subject.allRowsSums(emptyMatrix);
 
-        //assertEquals(null, result, "The sum of integers of any row in an empty array must be zero");
-        assertThrows(ArrayStoreException.class, () -> subject.allRowsSums(emptyMatrix));
-
+        assertTrue(result.length == 0, "No sum of any row should be returned from an empty matrix");
     }
-
-
-    //Que pasa si la matriz es irregular, vacia
-
 
     @Test
     void given_RowMagicMatrix_when_isRowMagicIsCalled_then_trueIsReturned() {

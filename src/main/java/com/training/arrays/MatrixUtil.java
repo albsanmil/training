@@ -77,11 +77,15 @@ public class MatrixUtil {
      * @return an array with the sum of each row
      */
     public static int[] allRowsSums(int[][] integerMatrix) {
-        int[] totalRowsResutl = new int[integerMatrix.length];
-        for (int i = 0; i < totalRowsResutl.length; i++) {
-            totalRowsResutl[i] = rowSum(integerMatrix, i);
+        if (integerMatrix.length == 0) {
+            return new int[0];
         }
-        return totalRowsResutl;
+
+        int[] totalRowsResult = new int[integerMatrix.length];
+        for (int i = 0; i < totalRowsResult.length; i++) {
+            totalRowsResult[i] = rowSum(integerMatrix, i);
+        }
+        return totalRowsResult;
     }
 
     /**
