@@ -59,9 +59,45 @@ public class RomanConverter {
                             if (counter >= 4) {
                                 return 0;
                             }
+                            if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
+                                counterV++;
+                                if (counterV == 2) {
+                                    return 0;
+                                }
+                            }
+                            else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+                                counterL++;
+                                if (counterL == 2) {
+                                    return 0;
+                                }
+                            }
+                            else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+                                counterD++;
+                                if (counterD == 2) {
+                                    return 0;
+                                }
+                            }
                         }
                         else {
                             counter = 1;
+                            if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
+                                counterV++;
+                                if (counterV == 2) {
+                                    return 0;
+                                }
+                            }
+                            else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+                                counterL++;
+                                if (counterL == 2) {
+                                    return 0;
+                                }
+                            }
+                            else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+                                counterD++;
+                                if (counterD == 2) {
+                                    return 0;
+                                }
+                            }
                         }
                     }
                     else if (rom.equals(roman.charAt(i)) && primRomans.get(rom) < primRomans.get(roman.charAt(j))) {
@@ -72,25 +108,43 @@ public class RomanConverter {
                         if (k != 0 && primRomans.get(rom).equals(primRomans.get(roman.charAt(k)))) {
                             return 0;
                         }
-                    }
-                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
-                        counterV++;
-                        if (counterV == 2) {
-                            return 0;
+                        if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
+                            counterV++;
+                            if (counterV == 2) {
+                                return 0;
+                            }
+                        }
+                        else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+                            counterL++;
+                            if (counterL == 2) {
+                                return 0;
+                            }
+                        }
+                        else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+                            counterD++;
+                            if (counterD == 2) {
+                                return 0;
+                            }
                         }
                     }
-                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
-                        counterL++;
-                        if (counterL == 2) {
-                            return 0;
-                        }
-                    }
-                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
-                        counterD++;
-                        if (counterD == 2) {
-                            return 0;
-                        }
-                    }
+//                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
+//                        counterV++;
+//                        if (counterV == 2) {
+//                            return 0;
+//                        }
+//                    }
+//                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+//                        counterL++;
+//                        if (counterL == 2) {
+//                            return 0;
+//                        }
+//                    }
+//                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+//                        counterD++;
+//                        if (counterD == 2) {
+//                            return 0;
+//                        }
+//                    }
                 }
             }
             return result;
