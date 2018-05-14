@@ -97,7 +97,7 @@ public class MatrixUtil {
     public static boolean isRowMagic(int[][] integerMatrix) {
         if (integerMatrix.length == 0) {
             return false;
-        }refactor
+        }
 
         int firstRowSum = rowSum(integerMatrix, 0);
         for (int i = 1; i < integerMatrix.length; i++) {

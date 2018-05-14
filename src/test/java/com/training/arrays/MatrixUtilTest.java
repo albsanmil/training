@@ -82,7 +82,7 @@ class MatrixUtilTest {
     }
 
     @Test
-    void given_EmptySquareMatrix_when_columnSumIsCalled_then_ZeroIsReturned() {
+    void given_EmptySquareMatrix_when_columnSumIsCalled_then_zeroIsReturned() {
         int[][] emptyMatrix = new int[][]{};
 
         int result = subject.columnSum(emptyMatrix, 0);
