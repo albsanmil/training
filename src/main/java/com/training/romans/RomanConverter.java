@@ -41,6 +41,14 @@ public class RomanConverter {
             int counterD = 0;
             int k = 0;
             for (int i = 0; i < roman.length(); i++) {
+//                if (roman.charAt(i) == 'C' || roman.charAt(i) == 'D' || roman.charAt(i) == 'V' || roman.charAt(i) == 'X' || roman.charAt(i) == 'I' || roman.charAt(i) == 'L' || roman.charAt(i) == 'M') {
+//
+//                }
+//                else {
+//                    return 0;
+//                }
+
+
                 int j = i + 1;
                 if (i == roman.length() - 1) {
                     j = i;
@@ -56,6 +64,7 @@ public class RomanConverter {
                         // Esto controla que el número romano no pueda contener mas de tres carácters iguales seguidos
                         if (k >= 0 && primRomans.get(rom).equals(primRomans.get(roman.charAt(k)))) {
                             counter++;
+
                             if (counter >= 4) {
                                 return 0;
                             }
@@ -64,43 +73,40 @@ public class RomanConverter {
                                 if (counterV == 2) {
                                     return 0;
                                 }
-                            }
-                            else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+                            } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
                                 counterL++;
                                 if (counterL == 2) {
                                     return 0;
                                 }
-                            }
-                            else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+                            } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
                                 counterD++;
                                 if (counterD == 2) {
                                     return 0;
                                 }
                             }
-                        }
-                        else {
+
+                        } else {
                             counter = 1;
+
                             if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
                                 counterV++;
                                 if (counterV == 2) {
                                     return 0;
                                 }
-                            }
-                            else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+                            } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
                                 counterL++;
                                 if (counterL == 2) {
                                     return 0;
                                 }
-                            }
-                            else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+                            } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
                                 counterD++;
                                 if (counterD == 2) {
                                     return 0;
                                 }
                             }
+
                         }
-                    }
-                    else if (rom.equals(roman.charAt(i)) && primRomans.get(rom) < primRomans.get(roman.charAt(j))) {
+                    } else if (rom.equals(roman.charAt(i)) && primRomans.get(rom) < primRomans.get(roman.charAt(j))) {
                         result -= primRomans.get(rom);
                         counter = 1;
                         // Esto controla que cuando se resta el valor de un carácter al que tiene a su derecha por ser este
@@ -108,24 +114,24 @@ public class RomanConverter {
                         if (k != 0 && primRomans.get(rom).equals(primRomans.get(roman.charAt(k)))) {
                             return 0;
                         }
-                        if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
+
+                        if (roman.charAt(i) == 'V') {
                             counterV++;
                             if (counterV == 2) {
                                 return 0;
                             }
-                        }
-                        else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+                        } else if (roman.charAt(i) == 'L') {
                             counterL++;
                             if (counterL == 2) {
                                 return 0;
                             }
-                        }
-                        else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+                        } else if (roman.charAt(i) == 'D') {
                             counterD++;
                             if (counterD == 2) {
                                 return 0;
                             }
                         }
+
                     }
 //                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
 //                        counterV++;

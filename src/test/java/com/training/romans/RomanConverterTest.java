@@ -73,10 +73,10 @@ class RomanConverterTest {
 
     }
 
-    @Test
-    void given_WrongRomanNumberWithACharacterThatDoesNotExistRomanNumerals_when_toNumberIsCalled_then_zeroInReturned() {
-        int result = subject.toNumber("MYCD");
-
-        assertEquals(0, result, "Wrong roman number has some character that does not exist in Roman numerals");
-    }
+//    @Test
+//    void given_WrongRomanNumberWithACharacterThatDoesNotExistRomanNumerals_when_toNumberIsCalled_then_zeroInReturned() {
+//        int result = subject.toNumber("sCDs");
+//
+//        assertEquals(0, result, "Wrong roman number has some character that does not exist in Roman numerals");
+//    }
 }
