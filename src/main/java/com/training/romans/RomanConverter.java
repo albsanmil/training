@@ -1,161 +1,218 @@
 package com.training.romans;
 
-import java.util.HashMap;
+import com.google.common.collect.ImmutableMap;
+
 import java.util.Map;
+
+import static com.google.common.base.Preconditions.checkNotNull;
+import static com.google.common.base.Strings.isNullOrEmpty;
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 public class RomanConverter {
 
-    public static int toNumber(String roman) {
+    private Map<Character, Integer> romanSymbols = ImmutableMap.<Character, Integer>builder()
+            .put('I', 1)
+            .put('V', 5)
+            .put('X', 10)
+            .put('L', 50)
+            .put('C', 100)
+            .put('D', 500)
+            .put('M', 1000)
+            .build();
 
-        roman = roman.toUpperCase();
+    public int toNumber(String roman) {
+        checkNotNull(roman, "Cannot convert to a number from a null string");
 
-        Map<Character, Integer> primRomans = new HashMap<>();
+        int result = 0;
 
-        primRomans.put('I', 1);
-        primRomans.put('V', 5);
-        primRomans.put('X', 10);
-        primRomans.put('L', 50);
-        primRomans.put('C', 100);
-        primRomans.put('D', 500);
-        primRomans.put('M', 1000);
+        if (!isNullOrEmpty(roman)) {
+            char[] symbols = roman.toUpperCase().toCharArray();
+            Integer beforePreviousValue = null;
+            Integer previousValue = null;
+            Integer currentValue = null;
+            for (char symbol : symbols) {
+                currentValue = romanSymbols.get(symbol);
+                if (nonNull(currentValue)) {
+                    if (!isWrongCombination(beforePreviousValue, previousValue, currentValue)) {
+                        if (isNull(previousValue) || previousValue >= currentValue) {
+                            result += currentValue;
+                        }
+                        else if (previousValue < currentValue) {
+                            result += currentValue - 2 * previousValue;
+                        }
 
+                        if (nonNull(previousValue)) {
+                            beforePreviousValue = previousValue;
+                        }
 
-        if (roman.length() == 0) {
-            return 0;
-        }
-        else if (roman.length() == 1) {
-            for (int i = 0; i < roman.length(); i++) {
-                for (Character rom : primRomans.keySet()) {
-                    if (rom.equals(roman.charAt(i))) {
-                        return primRomans.get(rom);
+                        previousValue = currentValue;
+                    }
+                    else {
+                        throw new IllegalArgumentException("Wrong combination of roman symbols " + roman);
                     }
                 }
+                else {
+                    throw new IllegalArgumentException("Found a non-roman symbol " + symbol);
+                }
             }
-            return 0;
         }
         else {
-            int result = 0;
-            int counter = 0;
-            int counterV = 0;
-            int counterL = 0;
-            int counterD = 0;
-            int k = 0;
-            for (int i = 0; i < roman.length(); i++) {
-//                if (roman.charAt(i) == 'C' || roman.charAt(i) == 'D' || roman.charAt(i) == 'V' || roman.charAt(i) == 'X' || roman.charAt(i) == 'I' || roman.charAt(i) == 'L' || roman.charAt(i) == 'M') {
+            throw new IllegalArgumentException("Found an empty string");
+        }
+//        // If the user passes it as a parameter, lowercase letters make it uppercase
+//        roman = roman.toUpperCase();
 //
+//        if (roman.length() == 0) {
+//            return 0;
+//        }
+//        else if (roman.length() == 1) {
+//            for (int i = 0; i < roman.length(); i++) {
+//                for (Character rom : romanSymbols.keySet()) {
+//                    if (rom.equals(roman.charAt(i))) {
+//                        return romanSymbols.get(rom);
+//                    }
+//                }
+//            }
+//            return 0;
+//        }
+//        else {
+//            int result = 0;
+//            int counter = 0;
+//            int counterV = 0;
+//            int counterL = 0;
+//            int counterD = 0;
+//            int k = 0;
+//            for (int i = 0; i < roman.length(); i++) {
+//                if (roman.charAt(i) == 'C' ||
+//                        roman.charAt(i) == 'D' ||
+//                        roman.charAt(i) == 'V' ||
+//                        roman.charAt(i) == 'X' ||
+//                        roman.charAt(i) == 'I' ||
+//                        roman.charAt(i) == 'L' ||
+//                        roman.charAt(i) == 'M') {
+//
+//                    int j = i + 1;
+//                    if (i == roman.length() - 1) {
+//                        j = i;
+//                    }
+//
+//                    if (i != 0) {
+//                        k = i - 1;
+//                    }
+//
+//                    for (Character rom : romanSymbols.keySet()) {
+//                        if (rom.equals(roman.charAt(i)) && romanSymbols.get(rom) >= romanSymbols.get(roman.charAt(j))) {
+//                            result += romanSymbols.get(rom);
+//                            // This controls that the Roman numeral can not contain more than three equal characters followed
+//                            if (k >= 0 && romanSymbols.get(rom).equals(romanSymbols.get(roman.charAt(k)))) {
+//                                counter++;
+//
+//                                if (counter >= 4) {
+//                                    return 0;
+//                                }
+//                                if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
+//                                    counterV++;
+//                                    if (counterV == 2) {
+//                                        return 0;
+//                                    }
+//                                } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+//                                    counterL++;
+//                                    if (counterL == 2) {
+//                                        return 0;
+//                                    }
+//                                } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+//                                    counterD++;
+//                                    if (counterD == 2) {
+//                                        return 0;
+//                                    }
+//                                }
+//
+//                            } else {
+//                                counter = 1;
+//
+//                                if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
+//                                    counterV++;
+//                                    if (counterV == 2) {
+//                                        return 0;
+//                                    }
+//                                } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+//                                    counterL++;
+//                                    if (counterL == 2) {
+//                                        return 0;
+//                                    }
+//                                } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+//                                    counterD++;
+//                                    if (counterD == 2) {
+//                                        return 0;
+//                                    }
+//                                }
+//
+//                            }
+//                        } else if (rom.equals(roman.charAt(i)) && romanSymbols.get(rom) < romanSymbols.get(roman.charAt(j))) {
+//                            result -= romanSymbols.get(rom);
+//                            counter = 1;
+//                            // This controls that when the value of a character is subtracted from the one to which
+//                            // it has its right because it is greater, it checks that its character on the left is not the same. If so, return 0.
+//                            if (k != 0 && romanSymbols.get(rom).equals(romanSymbols.get(roman.charAt(k)))) {
+//                                return 0;
+//                            }
+//
+//                            if (roman.charAt(i) == 'V') {
+//                                counterV++;
+//                                if (counterV == 2) {
+//                                    return 0;
+//                                }
+//                            } else if (roman.charAt(i) == 'L') {
+//                                counterL++;
+//                                if (counterL == 2) {
+//                                    return 0;
+//                                }
+//                            } else if (roman.charAt(i) == 'D') {
+//                                counterD++;
+//                                if (counterD == 2) {
+//                                    return 0;
+//                                }
+//                            }
+//
+//                        }
+//    //                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
+//    //                        counterV++;
+//    //                        if (counterV == 2) {
+//    //                            return 0;
+//    //                        }
+//    //                    }
+//    //                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
+//    //                        counterL++;
+//    //                        if (counterL == 2) {
+//    //                            return 0;
+//    //                        }
+//    //                    }
+//    //                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
+//    //                        counterD++;
+//    //                        if (counterD == 2) {
+//    //                            return 0;
+//    //                        }
+//    //                    }
+//                    }
 //                }
 //                else {
 //                    return 0;
 //                }
+//
+//            }
+//            return result;
+//        }
 
+        return result;
+    }
 
-                int j = i + 1;
-                if (i == roman.length() - 1) {
-                    j = i;
-                }
-
-                if (i != 0) {
-                    k = i -1;
-                }
-
-                for (Character rom : primRomans.keySet()) {
-                    if (rom.equals(roman.charAt(i)) && primRomans.get(rom) >= primRomans.get(roman.charAt(j))) {
-                        result += primRomans.get(rom);
-                        // Esto controla que el número romano no pueda contener mas de tres carácters iguales seguidos
-                        if (k >= 0 && primRomans.get(rom).equals(primRomans.get(roman.charAt(k)))) {
-                            counter++;
-
-                            if (counter >= 4) {
-                                return 0;
-                            }
-                            if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
-                                counterV++;
-                                if (counterV == 2) {
-                                    return 0;
-                                }
-                            } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
-                                counterL++;
-                                if (counterL == 2) {
-                                    return 0;
-                                }
-                            } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
-                                counterD++;
-                                if (counterD == 2) {
-                                    return 0;
-                                }
-                            }
-
-                        } else {
-                            counter = 1;
-
-                            if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
-                                counterV++;
-                                if (counterV == 2) {
-                                    return 0;
-                                }
-                            } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
-                                counterL++;
-                                if (counterL == 2) {
-                                    return 0;
-                                }
-                            } else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
-                                counterD++;
-                                if (counterD == 2) {
-                                    return 0;
-                                }
-                            }
-
-                        }
-                    } else if (rom.equals(roman.charAt(i)) && primRomans.get(rom) < primRomans.get(roman.charAt(j))) {
-                        result -= primRomans.get(rom);
-                        counter = 1;
-                        // Esto controla que cuando se resta el valor de un carácter al que tiene a su derecha por ser este
-                        // mayor, comprueba que su carácter de la izquierda no sea igual. Si es así retorna 0.
-                        if (k != 0 && primRomans.get(rom).equals(primRomans.get(roman.charAt(k)))) {
-                            return 0;
-                        }
-
-                        if (roman.charAt(i) == 'V') {
-                            counterV++;
-                            if (counterV == 2) {
-                                return 0;
-                            }
-                        } else if (roman.charAt(i) == 'L') {
-                            counterL++;
-                            if (counterL == 2) {
-                                return 0;
-                            }
-                        } else if (roman.charAt(i) == 'D') {
-                            counterD++;
-                            if (counterD == 2) {
-                                return 0;
-                            }
-                        }
-
-                    }
-//                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'V') {
-//                        counterV++;
-//                        if (counterV == 2) {
-//                            return 0;
-//                        }
-//                    }
-//                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'L') {
-//                        counterL++;
-//                        if (counterL == 2) {
-//                            return 0;
-//                        }
-//                    }
-//                    else if (rom.equals(roman.charAt(i)) && roman.charAt(i) == 'D') {
-//                        counterD++;
-//                        if (counterD == 2) {
-//                            return 0;
-//                        }
-//                    }
-                }
-            }
-            return result;
+    private boolean isWrongCombination(Integer beforePreviousValue, Integer previousValue, Integer currentValue) {
+        if (isNull(previousValue) || isNull(currentValue)) {
+            return false;
         }
+
+        return previousValue <= currentValue && (previousValue.equals(5) || previousValue.equals(50) || previousValue.equals(500))
+                || (nonNull(beforePreviousValue) && beforePreviousValue < currentValue && previousValue < currentValue);
     }
 }
-
-

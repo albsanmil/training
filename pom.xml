@@ -10,6 +10,7 @@
 
     <properties>
         <junit.version>5.1.1</junit.version>
+        <guava.version>23.0</guava.version>
     </properties>
 
     <dependencies>
@@ -17,7 +18,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>23.0</version>
+            <version>${guava.version}</version>
         </dependency>
 
         <!-- Testing -->
@@ -31,6 +32,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava-testlib</artifactId>
+            <version>${guava.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
