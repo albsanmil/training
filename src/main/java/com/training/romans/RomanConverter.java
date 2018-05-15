@@ -30,11 +30,11 @@ public class RomanConverter {
             char[] symbols = roman.toUpperCase().toCharArray();
             Integer beforePreviousValue = null;
             Integer previousValue = null;
-            Integer currentValue = null;
+            Integer currentValue;
             for (char symbol : symbols) {
                 currentValue = romanSymbols.get(symbol);
                 if (nonNull(currentValue)) {
-                    if (!isWrongCombination(beforePreviousValue, previousValue, currentValue)) {
+                    if (!isGoodCombination(beforePreviousValue, previousValue, currentValue)) {
                         if (isNull(previousValue) || previousValue >= currentValue) {
                             result += currentValue;
                         }
@@ -45,7 +45,6 @@ public class RomanConverter {
                         if (nonNull(previousValue)) {
                             beforePreviousValue = previousValue;
                         }
-
                         previousValue = currentValue;
                     }
                     else {
@@ -203,11 +202,10 @@ public class RomanConverter {
 //            }
 //            return result;
 //        }
-
         return result;
     }
 
-    private boolean isWrongCombination(Integer beforePreviousValue, Integer previousValue, Integer currentValue) {
+    private boolean isGoodCombination(Integer beforePreviousValue, Integer previousValue, Integer currentValue) {
         if (isNull(previousValue) || isNull(currentValue)) {
             return false;
         }
