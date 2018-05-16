@@ -5,12 +5,17 @@ import com.google.common.collect.ImmutableSet;
 
 import java.util.Set;
 
-import static com.training.romans.RomanSymbol.*;
 import static java.util.Objects.isNull;
 
 public class RomanValidator {
 
-    private Set<String> validCombinationBasedOnSubtractionRule = ImmutableSet.<String>builder()
+    private Set<String> wrongPairsOfRepeatedSymbols = ImmutableSet.<String>builder()
+            .add("VV")
+            .add("LL")
+            .add("DD")
+            .build();
+
+    private Set<String> validPairsUsingSubtractionRule = ImmutableSet.<String>builder()
             .add("IV")
             .add("IX")
             .add("XL")
@@ -30,7 +35,8 @@ public class RomanValidator {
         for (char character : romanCharacters) {
             try {
                 currentSymbol = RomanSymbol.fromCharacter(character);
-                if (isWrongRepetitionOfSymbols(previousSymbol, currentSymbol) || isWrongCombinationBasedOnSubtractionRule(previousSymbol, currentSymbol)) {
+                if (isWrongPairOfRepeatedSymbols(previousSymbol, currentSymbol)
+                        || isNotPairUsingSubtractionRule(previousSymbol, currentSymbol)) {
                     return false;
                 }
                 else {
@@ -45,29 +51,28 @@ public class RomanValidator {
         return true;
     }
 
-    private boolean isWrongRepetitionOfSymbols(RomanSymbol previousSymbol, RomanSymbol currentSymbol) {
+    private boolean isWrongPairOfRepeatedSymbols(RomanSymbol previousSymbol, RomanSymbol currentSymbol) {
         if (isNull(previousSymbol) || isNull(currentSymbol)) {
             return false;
         }
 
-        boolean areSameSymbols = previousSymbol.equals(currentSymbol);
-        boolean isWrongCombination_VV = V.equals(previousSymbol) && areSameSymbols;
-        boolean isWrongCombination_LL = L.equals(previousSymbol) && areSameSymbols;
-        boolean isWrongCombination_DD = D.equals(previousSymbol) && areSameSymbols;
-
-        return isWrongCombination_VV || isWrongCombination_LL || isWrongCombination_DD;
+        String pair = buildPair(previousSymbol, currentSymbol);
+        return wrongPairsOfRepeatedSymbols.contains(pair);
     }
 
-    private boolean isWrongCombinationBasedOnSubtractionRule(RomanSymbol previousSymbol, RomanSymbol currentSymbol) {
-        if (isNull(previousSymbol) || isNull(currentSymbol)) {
+    private boolean isNotPairUsingSubtractionRule(RomanSymbol previousSymbol, RomanSymbol currentSymbol) {
+        if (isNull(previousSymbol) || isNull(currentSymbol) || previousSymbol.getCode() >= currentSymbol.getCode()) {
             return false;
         }
 
-        String currentCombination = new StringBuilder()
+        String pair = buildPair(previousSymbol, currentSymbol);
+        return !validPairsUsingSubtractionRule.contains(pair);
+    }
+
+    private String buildPair(RomanSymbol previousSymbol, RomanSymbol currentSymbol) {
+        return new StringBuilder()
                 .append(String.valueOf(previousSymbol.getCharacter()))
                 .append(String.valueOf(currentSymbol.getCharacter()))
                 .toString();
-
-        return !(previousSymbol.getCode() < currentSymbol.getCode() && validCombinationBasedOnSubtractionRule.contains(currentCombination));
     }
 }

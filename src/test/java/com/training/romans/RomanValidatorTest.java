@@ -61,6 +61,15 @@ public class RomanValidatorTest {
         assertTrue(result, "Wrong validation, roman symbols '" + roman + "' are a valid roman number");
     }
 
+    @DisplayName("Testing the repetition of roman symbols more than three times")
+    @ParameterizedTest(name = "\"{0}\" is not a valid roman number")
+    @ValueSource(strings = {"IIII"})
+    void when_RepeatingRomanSymbolsMoreThanThreeTimes_expect_FailedValidation(String wrongRoman) {
+        boolean result = subject.validate(wrongRoman);
+
+        assertFalse(result, "Wrong validation, roman symbols '" + wrongRoman + "' are not a valid roman number");
+    }
+
     @DisplayName("Testing the repetition of non acceptable roman symbols")
     @ParameterizedTest(name = "\"{0}\" is not a valid roman number")
     @ValueSource(strings = {"VV", "VVV", "LL", "LLL", "DD", "DDD"})
@@ -81,7 +90,7 @@ public class RomanValidatorTest {
 
     @DisplayName("Testing pairs of roman symbols that do not use the subtraction rule")
     @ParameterizedTest(name = "\"{0}\" is not a valid roman number")
-    @ValueSource(strings = {"VX"})
+    @ValueSource(strings = {"VX", "VL", "VC", "VD", "VM", "LC", "LD", "LM", "DM"})
     void when_PairsOfRomanSymbolsThatDoNotUseSubtractionRule_expect_FailedValidation(String wrongRoman) {
         boolean result = subject.validate(wrongRoman);
 
