@@ -33,6 +33,6 @@ public enum RomanSymbol {
             }
         }
 
-        throw new IllegalArgumentException("Roman character '" + character + "' does not exist");
+        throw new IllegalArgumentException("'" + character + "' is not a valid roman symbol");
     }
 }

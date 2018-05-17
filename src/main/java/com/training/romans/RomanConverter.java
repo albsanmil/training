@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableMap;
 
 import java.util.Map;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Strings.isNullOrEmpty;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -22,43 +22,41 @@ public class RomanConverter {
             .build();
 
     public int toNumber(String roman) {
-        checkNotNull(roman, "Cannot convert to a number from a null string");
+        checkArgument(!isNullOrEmpty(roman), "Cannot convert roman number from a null or empty string");
 
         int result = 0;
 
-        if (!isNullOrEmpty(roman)) {
-            char[] symbols = roman.toUpperCase().toCharArray();
-            Integer beforePreviousValue = null;
-            Integer previousValue = null;
-            Integer currentValue;
-            for (char symbol : symbols) {
-                currentValue = romanSymbols.get(symbol);
-                if (nonNull(currentValue)) {
-                    if (!isGoodCombination(beforePreviousValue, previousValue, currentValue)) {
-                        if (isNull(previousValue) || previousValue >= currentValue) {
-                            result += currentValue;
-                        }
-                        else if (previousValue < currentValue) {
-                            result += currentValue - 2 * previousValue;
-                        }
+        char[] symbols = roman.toUpperCase().toCharArray();
+        Integer beforeOfBeforePreviousValue = null;
+        Integer beforePreviousValue = null;
+        Integer previousValue = null;
+        Integer currentValue;
+        for (char symbol : symbols) {
+            currentValue = romanSymbols.get(symbol);
+            if (nonNull(currentValue)) {
+                if (!isGoodCombination(beforeOfBeforePreviousValue, beforePreviousValue, previousValue, currentValue)) {
+                    if (isNull(previousValue) || previousValue >= currentValue) {
+                        result += currentValue;
+                    }
+                    else if (previousValue < currentValue) {
+                        result += currentValue - 2 * previousValue;
+                    }
 
-                        if (nonNull(previousValue)) {
-                            beforePreviousValue = previousValue;
-                        }
-                        previousValue = currentValue;
+                    if (nonNull(previousValue)) {
+                        beforePreviousValue = previousValue;
                     }
-                    else {
-                        throw new IllegalArgumentException("Wrong combination of roman symbols " + roman);
-                    }
+                    previousValue = currentValue;
                 }
                 else {
-                    throw new IllegalArgumentException("Found a non-roman symbol " + symbol);
+                    throw new IllegalArgumentException("Wrong combination of roman symbols " + roman);
                 }
             }
+            else {
+                throw new IllegalArgumentException("Found a non-roman symbol " + symbol);
+            }
         }
-        else {
-            throw new IllegalArgumentException("Found an empty string");
-        }
+
+
 //        // If the user passes it as a parameter, lowercase letters make it uppercase
 //        roman = roman.toUpperCase();
 //
@@ -205,7 +203,9 @@ public class RomanConverter {
         return result;
     }
 
-    private boolean isGoodCombination(Integer beforePreviousValue, Integer previousValue, Integer currentValue) {
+    private boolean isGoodCombination(
+            Integer beforeOfBeforePreviousValue, Integer beforePreviousValue, Integer previousValue, Integer currentValue)
+    {
         if (isNull(previousValue) || isNull(currentValue)) {
             return false;
         }

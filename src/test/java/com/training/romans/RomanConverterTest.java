@@ -1,6 +1,5 @@
 package com.training.romans;
 
-import com.google.common.testing.NullPointerTester;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -20,10 +19,16 @@ class RomanConverterTest {
         subject = new RomanConverter();
     }
 
+    @DisplayName("Testing null argument")
     @Test
-    void testNulls() {
-        NullPointerTester nullPointerTester = new NullPointerTester();
-        nullPointerTester.testAllPublicInstanceMethods(subject);
+    void when_NullArgument_expect_ExceptionThrown() {
+        assertThrows(IllegalArgumentException.class, () -> subject.toNumber(null));
+    }
+
+    @DisplayName("Testing empty string argument")
+    @Test
+    void when_EmptyStringArgument_expect_ExceptionThrown() {
+        assertThrows(IllegalArgumentException.class, () -> subject.toNumber(""));
     }
 
     @DisplayName("Testing known roman symbol")
