@@ -108,4 +108,39 @@ public class MatrixUtil {
         }
         return true;
     }
+
+
+    /**
+     * Print this matrix if 5 is given
+     * |1|2|3|4|5|
+     * |2|3|4|5|1|
+     * |3|4|5|1|2|
+     * |4|5|1|2|3|
+     * |5|1|2|3|4|
+     *
+     * @param size the matrix of integer
+     * @return the matrix with the previous format presented, depending on the size parameter
+     */
+    public int[][] createAndPrintMatrix(int size) {
+        checkArgument(size > 0, "Wrong cannot create a matrix of " + size + " * " + size);
+        checkArgument(size < 6, "Wrong cannot create a matrix of " + size + " * " + size);
+
+        int[][] matrixResult = new int[size][size];
+        int value;
+        for (int i = 0; i < matrixResult.length; i++) {
+            value = i + 1;
+            for (int j = 0; j <matrixResult[i].length; j++) {
+                matrixResult[i][j] = value;
+                System.out.print("|" + matrixResult[i][j]);
+                value += 1;
+                if (value >= 6) {
+                    value = 1;
+                }
+            }
+            System.out.println("|");
+        }
+        System.out.println("..............................................................");
+        return matrixResult;
+
+    }
 }

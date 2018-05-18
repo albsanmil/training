@@ -41,134 +41,191 @@ class MatrixUtilTest {
         subject = new MatrixUtil();
     }
 
-    @Test
-    void given_SquareMatrixAndRowIndexInRange_when_rowSumIsCalled_then_totalRowSumIsReturned() {
-        int rowIndexInRange = 0;
-        int result = subject.rowSum(squareMatrix, rowIndexInRange);
+//    @Test
+//    void given_SquareMatrixAndRowIndexInRange_when_rowSumIsCalled_then_totalRowSumIsReturned() {
+//        int rowIndexInRange = 0;
+//        int result = subject.rowSum(squareMatrix, rowIndexInRange);
+//
+//        assertEquals(2, result, "Wrong sum of integers in first row");
+//    }
+//
+//    @Test
+//    void given_SquareMatrixAndOutOfRangeRowIndex_when_rowSumIsCalled_then_ExceptionIsThrown() {
+//        int rowIndexOutOfRange = -1;
+//
+//        assertThrows(ArrayIndexOutOfBoundsException.class, () -> subject.rowSum(squareMatrix, rowIndexOutOfRange));
+//    }
+//
+//    @Test
+//    void given_EmptySquareMatrix_when_rowSumIsCalled_then_ExceptionIsThrown() {
+//        int[][] emptyMatrix = new int[][]{};
+//
+//        int result = subject.rowSum(emptyMatrix, 0);
+//
+//        assertEquals(0, result, "The sum of integers in any row of an empty matrix should be zero");
+//    }
+//
+//    @Test
+//    void given_SquareMatrixAndColumnIndexInRange_when_columnSumIsCalled_then_totalColumnSumIsReturned() {
+//        int columnIndexInRange = 2;
+//
+//        int result = subject.columnSum(squareMatrix, columnIndexInRange);
+//
+//        assertEquals(7, result, "Wrong sum of integers in the third column");
+//    }
+//
+//    @Test
+//    void given_SquareMatrixAndOutOfRangeColumnIndex_when_columnSumIsCalled_then_ExceptionIsThrown() {
+//        int columnIndexOutOfRange = -1;
+//
+//        assertThrows(IllegalArgumentException.class, () -> subject.columnSum(squareMatrix, columnIndexOutOfRange));
+//    }
+//
+//    @Test
+//    void given_EmptySquareMatrix_when_columnSumIsCalled_then_zeroIsReturned() {
+//        int[][] emptyMatrix = new int[][]{};
+//
+//        int result = subject.columnSum(emptyMatrix, 0);
+//
+//        assertEquals(0, result, "The sum of integers in any column of an empty matrix should be zero");
+//    }
+//
+//    @Test
+//    void given_IrregularMatrixAndColumnIndexInRangeOfSomeRows_when_columnSumIsCalled_then_totalColumnSumIsReturned() {
+//        int columnIndexInRange = 2;
+//        int result = subject.columnSum(irregularMatrix, columnIndexInRange);
+//
+//        assertEquals(1, result, "Wrong sum of integers in the third column");
+//    }
+//
+//    @Test
+//    void given_SquareMatrix_when_maxIsCalled_then_maxValueIsReturned() {
+//        int result = subject.max(squareMatrix);
+//
+//        assertEquals(11, result, "Could not find the maximum integer in the matrix");
+//    }
+//
+//    @Test
+//    void given_SquareMatrixWithAllNegative_when_maxIsCalled_then_maxValueIsReturned() {
+//        int result = subject.max(squareMatrixNegative);
+//
+//        assertEquals(-5, result, "Could not find the maximum integer in the matrix");
+//    }
+//
+//    @Test
+//    void given_SquareMatrix_when_allRowsSumsIsCalled_then_sumOfRowsIsReturned() {
+//        int[] result = subject.allRowsSums(squareMatrix);
+//
+//        int EXPECTED_SUM_FIRST_ROW = 2;
+//        int EXPECTED_SUM_SECOND_ROW = 12;
+//        int EXPECTED_SUM_THIRD_ROW = 38;
+//        int EXPECTED_SUM_FOURTH_ROW = -26;
+//
+//        assertEquals(EXPECTED_SUM_FIRST_ROW, result[0], "The sum of the integers in the first row is incorrect");
+//        assertEquals(EXPECTED_SUM_SECOND_ROW, result[1], "The sum of the integers in second row is incorrect");
+//        assertEquals(EXPECTED_SUM_THIRD_ROW, result[2], "The sum of the integers in third row is incorrect");
+//        assertEquals(EXPECTED_SUM_FOURTH_ROW, result[3], "The sum of the integers in forrth row is incorrect");
+//    }
+//
+//    @Test
+//    void given_IrregularMatrix_when_allRowsSumsIsCalled_then_sumOfRowsIsReturned() {
+//        int[] result = subject.allRowsSums(irregularMatrix);
+//
+//        int EXPECTED_SUM_FIRST_ROW = 2;
+//        int EXPECTED_SUM_SECOND_ROW = -1;
+//        int EXPECTED_SUM_THIRD_ROW = 38;
+//        int EXPECTED_SUM_FOURTH_ROW = -18;
+//
+//        assertEquals(EXPECTED_SUM_FIRST_ROW, result[0], "The sum of the integers in the first row is incorrect");
+//        assertEquals(EXPECTED_SUM_SECOND_ROW, result[1], "The sum of the integers in second row is incorrect");
+//        assertEquals(EXPECTED_SUM_THIRD_ROW, result[2], "The sum of the integers in third row is incorrect");
+//        assertEquals(EXPECTED_SUM_FOURTH_ROW, result[3], "The sum of the integers in fourth row is incorrect");
+//    }
+//
+//    @Test
+//    void given_EmptyMatrix_when_allRowsSumsIsCalled_then_noSumIsReturned() {
+//        //int[][] emptyMatrix = new int[][]{};
+//
+//        int[] result = subject.allRowsSums(emptyMatrix);
+//
+//        assertTrue(result.length == 0, "No sum of any row should be returned from an empty matrix");
+//    }
+//
+//    @Test
+//    void given_RowMagicMatrix_when_isRowMagicIsCalled_then_trueIsReturned() {
+//        boolean result = subject.isRowMagic(rowMagic);
+//
+//        assertTrue(result, "Should return true for a row magic matrix");
+//    }
+//
+//    @Test
+//    void given_NonRowMagicMatrix_when_isRowMagicIsCalled_then_falseIsReturned() {
+//        boolean result = subject.isRowMagic(squareMatrix);
+//
+//        assertFalse(result, "Should return false for a non row magic matrix");
+//    }
+//
+//    @Test
+//    void given_EmptyMatrix_when_isRowMagicIsCalled_then_falseIsReturned() {
+//        boolean result = subject.isRowMagic(emptyMatrix);
+//
+//        assertFalse(result, "An empty matrix is not row magic");
+//    }
 
-        assertEquals(2, result, "Wrong sum of integers in first row");
+
+    @Test
+    void given_SizeOutOfRangeAs0_when_isCreateAndPrintMatrixIsCalled_then_ExceptionThrown() {
+        int size = 0;
+        Throwable exception = assertThrows(IllegalArgumentException. class, () -> subject.createAndPrintMatrix(size));
+
+        assertEquals("Wrong cannot create a matrix of " + size + " * " + size, exception.getMessage());
     }
 
     @Test
-    void given_SquareMatrixAndOutOfRangeRowIndex_when_rowSumIsCalled_then_ExceptionIsThrown() {
-        int rowIndexOutOfRange = -1;
+    void given_SizeOutOfRangeAs6_when_isCreateAndPrintMatrixIsCalled_then_ExceptionThrown() {
+        int size = 6;
+        Throwable exception = assertThrows(IllegalArgumentException. class, () -> subject.createAndPrintMatrix(size));
 
-        assertThrows(ArrayIndexOutOfBoundsException.class, () -> subject.rowSum(squareMatrix, rowIndexOutOfRange));
+        assertEquals("Wrong cannot create a matrix of " + size + " * " + size, exception.getMessage());
     }
 
     @Test
-    void given_EmptySquareMatrix_when_rowSumIsCalled_then_ExceptionIsThrown() {
-        int[][] emptyMatrix = new int[][]{};
+    void given_SizeIsOne_when_isCreateAndPrintMatrixIsCalled_then_MatrixIsReturned() {
+        int matrixPrueba1[][] = {{1}};
+        int[][] result = subject.createAndPrintMatrix(1);
 
-        int result = subject.rowSum(emptyMatrix, 0);
-
-        assertEquals(0, result, "The sum of integers in any row of an empty matrix should be zero");
+        assertArrayEquals(matrixPrueba1, result, "The matrix is not correct");
     }
 
     @Test
-    void given_SquareMatrixAndColumnIndexInRange_when_columnSumIsCalled_then_totalColumnSumIsReturned() {
-        int columnIndexInRange = 2;
+    void given_SizeIsTwo_when_isCreateAndPrintMatrixIsCalled_then_MatrixIsReturned() {
+        int matrixPrueba2[][] = {{1, 2}, {2, 3}};
+        int[][] result = subject.createAndPrintMatrix(2);
 
-        int result = subject.columnSum(squareMatrix, columnIndexInRange);
-
-        assertEquals(7, result, "Wrong sum of integers in the third column");
+        assertArrayEquals(matrixPrueba2, result, "The matrix is not correct");
     }
 
     @Test
-    void given_SquareMatrixAndOutOfRangeColumnIndex_when_columnSumIsCalled_then_ExceptionIsThrown() {
-        int columnIndexOutOfRange = -1;
+    void given_SizeIsThree_when_isCreateAndPrintMatrixIsCalled_then_MatrixIsReturned() {
+        int matrixPrueba3[][] = {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}};
+        int[][] result = subject.createAndPrintMatrix(3);
 
-        assertThrows(IllegalArgumentException.class, () -> subject.columnSum(squareMatrix, columnIndexOutOfRange));
+        assertArrayEquals(matrixPrueba3, result, "The matrix is not correct");
     }
 
     @Test
-    void given_EmptySquareMatrix_when_columnSumIsCalled_then_zeroIsReturned() {
-        int[][] emptyMatrix = new int[][]{};
+    void given_SizeIsFour_when_isCreateAndPrintMatrixIsCalled_then_MatrixIsReturned() {
+        int matrixPrueba4[][] = {{1, 2, 3, 4}, {2, 3, 4, 5}, {3, 4, 5, 1}, {4, 5, 1, 2}};
+        int[][] result = subject.createAndPrintMatrix(4);
 
-        int result = subject.columnSum(emptyMatrix, 0);
-
-        assertEquals(0, result, "The sum of integers in any column of an empty matrix should be zero");
+        assertArrayEquals(matrixPrueba4, result, "The matrix is not correct");
     }
 
     @Test
-    void given_IrregularMatrixAndColumnIndexInRangeOfSomeRows_when_columnSumIsCalled_then_totalColumnSumIsReturned() {
-        int columnIndexInRange = 2;
-        int result = subject.columnSum(irregularMatrix, columnIndexInRange);
+    void given_SizeIsFive_when_isCreateAndPrintMatrixIsCalled_then_MatrixIsReturned() {
+        int matrixPrueba5[][] = {{1, 2, 3, 4, 5}, {2, 3, 4, 5, 1}, {3, 4, 5, 1, 2}, {4, 5, 1, 2, 3}, {5, 1, 2, 3, 4}};
+        int[][] result = subject.createAndPrintMatrix(5);
 
-        assertEquals(1, result, "Wrong sum of integers in the third column");
-    }
-
-    @Test
-    void given_SquareMatrix_when_maxIsCalled_then_maxValueIsReturned() {
-        int result = subject.max(squareMatrix);
-
-        assertEquals(11, result, "Could not find the maximum integer in the matrix");
-    }
-
-    @Test
-    void given_SquareMatrixWithAllNegative_when_maxIsCalled_then_maxValueIsReturned() {
-        int result = subject.max(squareMatrixNegative);
-
-        assertEquals(-5, result, "Could not find the maximum integer in the matrix");
-    }
-
-    @Test
-    void given_SquareMatrix_when_allRowsSumsIsCalled_then_sumOfRowsIsReturned() {
-        int[] result = subject.allRowsSums(squareMatrix);
-
-        int EXPECTED_SUM_FIRST_ROW = 2;
-        int EXPECTED_SUM_SECOND_ROW = 12;
-        int EXPECTED_SUM_THIRD_ROW = 38;
-        int EXPECTED_SUM_FOURTH_ROW = -26;
-
-        assertEquals(EXPECTED_SUM_FIRST_ROW, result[0], "The sum of the integers in the first row is incorrect");
-        assertEquals(EXPECTED_SUM_SECOND_ROW, result[1], "The sum of the integers in second row is incorrect");
-        assertEquals(EXPECTED_SUM_THIRD_ROW, result[2], "The sum of the integers in third row is incorrect");
-        assertEquals(EXPECTED_SUM_FOURTH_ROW, result[3], "The sum of the integers in forrth row is incorrect");
-    }
-
-    @Test
-    void given_IrregularMatrix_when_allRowsSumsIsCalled_then_sumOfRowsIsReturned() {
-        int[] result = subject.allRowsSums(irregularMatrix);
-
-        int EXPECTED_SUM_FIRST_ROW = 2;
-        int EXPECTED_SUM_SECOND_ROW = -1;
-        int EXPECTED_SUM_THIRD_ROW = 38;
-        int EXPECTED_SUM_FOURTH_ROW = -18;
-
-        assertEquals(EXPECTED_SUM_FIRST_ROW, result[0], "The sum of the integers in the first row is incorrect");
-        assertEquals(EXPECTED_SUM_SECOND_ROW, result[1], "The sum of the integers in second row is incorrect");
-        assertEquals(EXPECTED_SUM_THIRD_ROW, result[2], "The sum of the integers in third row is incorrect");
-        assertEquals(EXPECTED_SUM_FOURTH_ROW, result[3], "The sum of the integers in fourth row is incorrect");
-    }
-
-    @Test
-    void given_EmptyMatrix_when_allRowsSumsIsCalled_then_noSumIsReturned() {
-        //int[][] emptyMatrix = new int[][]{};
-
-        int[] result = subject.allRowsSums(emptyMatrix);
-
-        assertTrue(result.length == 0, "No sum of any row should be returned from an empty matrix");
-    }
-
-    @Test
-    void given_RowMagicMatrix_when_isRowMagicIsCalled_then_trueIsReturned() {
-        boolean result = subject.isRowMagic(rowMagic);
-
-        assertTrue(result, "Should return true for a row magic matrix");
-    }
-
-    @Test
-    void given_NonRowMagicMatrix_when_isRowMagicIsCalled_then_falseIsReturned() {
-        boolean result = subject.isRowMagic(squareMatrix);
-
-        assertFalse(result, "Should return false for a non row magic matrix");
-    }
-
-    @Test
-    void given_EmptyMatrix_when_isRowMagicIsCalled_then_falseIsReturned() {
-        boolean result = subject.isRowMagic(emptyMatrix);
-
-        assertFalse(result, "An empty matrix is not row magic");
+        assertArrayEquals(matrixPrueba5, result, "The matrix is not correct");
     }
 }
