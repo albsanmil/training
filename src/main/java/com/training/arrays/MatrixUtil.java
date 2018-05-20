@@ -136,10 +136,10 @@ public class MatrixUtil {
      * @param size the matrix of integer
      * @return the matrix with the previous format presented, depending on the size parameter
      */
-    public int[][] createAndPrintMatrix(int size) {
+    public static int[][] createAndPrintMatrix(int size) {
         checkArgument(size > 0, "Wrong cannot create a matrix of " + size + " * " + size);
 
-        int value = 0;
+        int value;
         int[][] matrixResult = new int[size][size];
         for (int i = 0; i < matrixResult.length; i++) {
             value = i;
@@ -153,11 +153,7 @@ public class MatrixUtil {
                     }
                     matrixResult[i][j] = value;
                     System.out.print("|" + matrixResult[i][j]);
-
-
                 }
-
-
             }
             System.out.println("|");
         }
@@ -165,3 +161,4 @@ public class MatrixUtil {
         return matrixResult;
     }
 }
+
