@@ -112,6 +112,21 @@ public class MatrixUtil {
 
     /**
      * Print this matrix if 5 is given
+
+     * |1|
+     *
+     * |1|2|
+     * |2|1|
+     *
+     * |1|2|3|
+     * |2|3|1|
+     * |3|1|2|
+     *
+     * |1|2|3|4|
+     * |2|3|4|1|
+     * |3|4|1|2|
+     * |4|1|2|3|
+     *
      * |1|2|3|4|5|
      * |2|3|4|5|1|
      * |3|4|5|1|2|
@@ -123,24 +138,30 @@ public class MatrixUtil {
      */
     public int[][] createAndPrintMatrix(int size) {
         checkArgument(size > 0, "Wrong cannot create a matrix of " + size + " * " + size);
-        checkArgument(size < 6, "Wrong cannot create a matrix of " + size + " * " + size);
 
+        int value = 0;
         int[][] matrixResult = new int[size][size];
-        int value;
         for (int i = 0; i < matrixResult.length; i++) {
-            value = i + 1;
+            value = i;
             for (int j = 0; j <matrixResult[i].length; j++) {
-                matrixResult[i][j] = value;
-                System.out.print("|" + matrixResult[i][j]);
-                value += 1;
-                if (value >= 6) {
-                    value = 1;
+                if (value <= size) {
+                    if (value == size) {
+                        value = 1;
+                    }
+                    else {
+                        value += 1;
+                    }
+                    matrixResult[i][j] = value;
+                    System.out.print("|" + matrixResult[i][j]);
+
+
                 }
+
+
             }
             System.out.println("|");
         }
         System.out.println("..............................................................");
         return matrixResult;
-
     }
 }
