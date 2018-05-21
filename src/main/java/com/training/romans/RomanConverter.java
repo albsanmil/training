@@ -1,6 +1,7 @@
 package com.training.romans;
 
 import com.google.common.collect.ImmutableMap;
+import com.training.romans.model.RomanSymbolsInProgress;
 
 import java.util.Map;
 
@@ -32,6 +33,7 @@ public class RomanConverter {
         Integer previousValue = null;
         Integer currentValue;
         for (char symbol : symbols) {
+            RomanSymbolsInProgress symbolsInProgress = new RomanSymbolsInProgress(null, null, null, RomanSymbol.fromCharacter(symbol));
             currentValue = romanSymbols.get(symbol);
             if (nonNull(currentValue)) {
                 if (!isGoodCombination(beforeOfBeforePreviousValue, beforePreviousValue, previousValue, currentValue)) {
