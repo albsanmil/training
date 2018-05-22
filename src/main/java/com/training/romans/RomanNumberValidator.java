@@ -6,6 +6,7 @@ import com.training.romans.model.RomanSymbolsInProgress;
 import java.util.Set;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 public class RomanNumberValidator {
@@ -29,17 +30,15 @@ public class RomanNumberValidator {
     public boolean validate(RomanSymbolsInProgress symbolsInProgress) {
         checkNotNull(symbolsInProgress, "Cannot validate from a null symbolsInProgress");
 
-//        if (isNull(symbolsInProgress.getLastBeforePreviousSymbol())
-//                && isNull(symbolsInProgress.getBeforePreviousSymbol())
-//                && isNull(symbolsInProgress.getPreviousSymbol())
-//                && nonNull(symbolsInProgress.getCurrentSymbol())) {
-//            return true;
-//        }
-
         RomanSymbol lastBeforePreviousSymbol = symbolsInProgress.getLastBeforePreviousSymbol();
         RomanSymbol beforePreviousSymbol = symbolsInProgress.getBeforePreviousSymbol();
         RomanSymbol previousSymbol = symbolsInProgress.getPreviousSymbol();
         RomanSymbol currentSymbol = symbolsInProgress.getCurrentSymbol();
+
+        if (areRomanSymbolsInProgressInAnInconsistentState(
+                lastBeforePreviousSymbol, beforePreviousSymbol, previousSymbol, currentSymbol))
+            throw new IllegalStateException(buildInconsistentStateMessage(lastBeforePreviousSymbol
+                    , beforePreviousSymbol, previousSymbol, currentSymbol));
 
         if (isSubtractionRuleValidationApplicable(previousSymbol, currentSymbol)) {
             String pair = buildPair(symbolsInProgress.getPreviousSymbol(), symbolsInProgress.getCurrentSymbol());
@@ -102,5 +101,43 @@ public class RomanNumberValidator {
                 && nonNull(currentSymbol)
                 && beforePreviousSymbol.getCode() < currentSymbol.getCode()
                 && previousSymbol.getCode() < currentSymbol.getCode();
+    }
+
+    private boolean areRomanSymbolsInProgressInAnInconsistentState(
+            RomanSymbol lastBeforePreviousSymbol,
+            RomanSymbol beforePreviousSymbol,
+            RomanSymbol previousSymbol,
+            RomanSymbol currentSymbol)
+    {
+        boolean isInconsistentStateWhenPreviousNotNull = nonNull(previousSymbol) && isNull(currentSymbol);
+
+        boolean isInconsistentStateWhenBeforePreviousNotNull = nonNull(beforePreviousSymbol)
+                && (isNull(previousSymbol) || isNull(currentSymbol));
+
+        boolean isInconsistentStateWhenLastBeforePreviousNotNull = nonNull(lastBeforePreviousSymbol)
+                && (isNull(beforePreviousSymbol) || isNull(previousSymbol) || isNull(currentSymbol));
+
+        return isInconsistentStateWhenPreviousNotNull
+                || isInconsistentStateWhenBeforePreviousNotNull
+                || isInconsistentStateWhenLastBeforePreviousNotNull;
+    }
+
+    private String buildInconsistentStateMessage(
+            RomanSymbol lastBeforePreviousSymbol,
+            RomanSymbol beforePreviousSymbol,
+            RomanSymbol previousSymbol,
+            RomanSymbol currentSymbol)
+    {
+        return new StringBuilder()
+                .append("Four last roman symbols \"")
+                .append(nonNull(lastBeforePreviousSymbol) ? lastBeforePreviousSymbol : "first symbol is null")
+                .append(", ")
+                .append(nonNull(beforePreviousSymbol) ? beforePreviousSymbol : "second symbol is null")
+                .append(", ")
+                .append(nonNull(previousSymbol) ? previousSymbol : "third symbol is null")
+                .append(", ")
+                .append(nonNull(currentSymbol) ? currentSymbol : "fourth symbol is null")
+                .append("\" are in an inconsistent state for the validation")
+                .toString();
     }
 }

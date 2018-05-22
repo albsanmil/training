@@ -151,4 +151,17 @@ public class RomanNumberValidatorTest {
 
         assertTrue(result, "Wrong validation, roman number '" + previousSymbol + currentSymbol + "' is valid");
     }
+
+    @DisplayName("Testing inconsistent state of the roman symbols in progress")
+    @ParameterizedTest(name = "\"null{0}null{1} does not represent a consistent state of roman symbols in progress")
+    @CsvSource({"X, X"})
+    void when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown(
+            char beforePreviousSymbol, char currentSymbol)
+    {
+        Throwable exception = assertThrows(IllegalStateException.class, () -> subject.validate(
+                getRomanSymbolsInProgress(null, beforePreviousSymbol, null, currentSymbol)));
+
+        assertEquals("Four last roman symbols \"first symbol is null, X, third symbol is null, X\" are in an "
+                + "inconsistent state for the validation", exception.getMessage());
+    }
 }
