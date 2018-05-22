@@ -177,7 +177,7 @@ class MatrixUtilTest {
     void given_SizeOutOfRangeAs0_when_isCreateAndPrintMatrixIsCalled_then_ExceptionThrown() {
         int size = 0;
 
-        Throwable exception = assertThrows(IllegalArgumentException. class, () -> subject.createAndPrintMatrix(size));
+        Throwable exception = assertThrows(IllegalArgumentException. class, () -> subject.createMatrix(size));
 
         assertEquals("Cannot create a matrix of " + size + "x" + size, exception.getMessage());
     }
@@ -186,7 +186,7 @@ class MatrixUtilTest {
     void given_SizeIsOne_when_isCreateAndPrintMatrixIsCalled_then_MatrixIsReturned() {
         int matrixProof1[][] = {{1}};
 
-        int[][] result = subject.createAndPrintMatrix(1);
+        int[][] result = subject.createMatrix(1);
 
         assertArrayEquals(matrixProof1, result, "The matrix is not correct");
     }
@@ -196,7 +196,7 @@ class MatrixUtilTest {
         int matrixProof2[][] = {{1, 2},
                                 {2, 1}};
 
-        int[][] result = subject.createAndPrintMatrix(2);
+        int[][] result = subject.createMatrix(2);
 
         assertArrayEquals(matrixProof2, result, "The matrix is not correct");
     }
@@ -207,7 +207,7 @@ class MatrixUtilTest {
                                 {2, 3, 1},
                                 {3, 1, 2}};
 
-        int[][] result = subject.createAndPrintMatrix(3);
+        int[][] result = subject.createMatrix(3);
 
         assertArrayEquals(matrixProof3, result, "The matrix is not correct");
     }
@@ -219,7 +219,7 @@ class MatrixUtilTest {
                                 {3, 4, 1, 2},
                                 {4, 1, 2, 3}};
 
-        int[][] result = subject.createAndPrintMatrix(4);
+        int[][] result = subject.createMatrix(4);
 
         assertArrayEquals(matrixProof4, result, "The matrix is not correct");
     }
@@ -232,7 +232,7 @@ class MatrixUtilTest {
                                 {4, 5, 1, 2, 3},
                                 {5, 1, 2, 3, 4}};
 
-        int[][] result = subject.createAndPrintMatrix(5);
+        int[][] result = subject.createMatrix(5);
 
         assertArrayEquals(matrixProof5, result, "The matrix is not correct");
     }
@@ -254,7 +254,7 @@ class MatrixUtilTest {
                                  {13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12},
                                  {14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13},
                                  {15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14}};
-        int[][] result = subject.createAndPrintMatrix(15);
+        int[][] result = subject.createMatrix(15);
 
         assertArrayEquals(matrixProof15, result, "The matrix is not correct");
     }

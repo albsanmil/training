@@ -110,7 +110,7 @@ public class MatrixUtil {
     }
 
     /**
-     * Print this matrix if 5 is given
+     * Create a matrix with the following format given a specific size.
      *
      * |1|2|3|4|5|
      * |2|3|4|5|1|
@@ -119,36 +119,38 @@ public class MatrixUtil {
      * |5|1|2|3|4|
      *
      * @param size The size of the matrix
-     * @return the matrix with the previous format presented, depending on the parameter size
+     * @return The matrix with the above format, depending on the parameter size
      */
-    public static int[][] createAndPrintMatrix(int size) {
+    public static int[][] createMatrix(int size) {
         checkArgument(size > 0, "Cannot create a matrix of " + size + "x" + size);
 
-        int[][] matrixResult = new int[size][size];
-        for (int i = 0; i < matrixResult.length; i++) {
-
-            for (int j = 0; j < matrixResult[i].length; j++) {
-                if (j + i == size) {
-                    matrixResult[i][j] = 1;
-                    printMatrix(i, j, matrixResult);
-                }
-                else if (j + i > size) {
-                    matrixResult[i][j] = i;
-                    printMatrix(i, j, matrixResult);
-                }
-                else {
-                    matrixResult[i][j] = j + i + 1;
-                    printMatrix(i, j, matrixResult);
-                }
+        int[][] matrix = new int[size][size];
+        for (int i = 0; i < matrix.length; i++) {
+            int[] row = matrix[i];
+            for (int j = 0; j < row.length; j++) {
+                int value = i + j + 1;
+                if (value > size)
+                    if (row[j - 1] == size)
+                        row[j] = 1;
+                    else
+                        row[j] = row[j - 1] + 1;
+                else
+                    row[j] = value;
             }
-            System.out.println("|");
         }
-        System.out.println("..............................................................");
-        return matrixResult;
+
+        return matrix;
     }
 
-    private static void printMatrix(int i, int j, int[][] matrixResult) {
-        System.out.print("|" + matrixResult[i][j]);
+    private static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            int[] row = matrix[i];
+            for (int j = 0; j < row.length; j++) {
+                System.out.print("|" + matrix[i][j]);
+            }
+            System.out.println('|');
+        }
+        System.out.println("..............................................................");
     }
 }
 
