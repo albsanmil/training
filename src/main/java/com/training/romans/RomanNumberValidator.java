@@ -1,6 +1,7 @@
 package com.training.romans;
 
 import com.google.common.collect.ImmutableSet;
+import com.training.romans.model.RomanSymbol;
 import com.training.romans.model.RomanSymbolsInProgress;
 
 import java.util.Set;

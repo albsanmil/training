@@ -11,7 +11,9 @@
     <properties>
         <spring.version>5.0.6.RELEASE</spring.version>
         <junit.version>5.1.1</junit.version>
+        <junit-platform-runner.version>1.2.0</junit-platform-runner.version>
         <guava.version>23.0</guava.version>
+        <mockito-core.version>2.18.3</mockito-core.version>
     </properties>
 
     <dependencies>
@@ -37,6 +39,12 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-runner</artifactId>
+            <version>${junit-platform-runner.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
             <version>${junit.version}</version>
@@ -54,7 +62,12 @@
             <!--<version>${spring.version}</version>-->
             <!--<scope>test</scope>-->
         <!--</dependency>-->
-
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito-core.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -67,6 +80,22 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.junit.platform</groupId>
+                        <artifactId>junit-platform-surefire-provider</artifactId>
+                        <version>1.0.1</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>

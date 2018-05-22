@@ -1,5 +1,6 @@
 package com.training.romans;
 
+import com.training.romans.model.RomanSymbol;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,5 +1,6 @@
 package com.training.romans;
 
+import com.training.romans.model.RomanSymbol;
 import com.training.romans.model.RomanSymbolsInProgress;
 
 import static java.util.Objects.nonNull;

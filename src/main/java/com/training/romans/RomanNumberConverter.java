@@ -1,63 +1,45 @@
 package com.training.romans;
 
-import com.google.common.collect.ImmutableMap;
+
+import com.training.romans.exception.RomanNumberConversionException;
+import com.training.romans.model.RomanSymbol;
 import com.training.romans.model.RomanSymbolsInProgress;
 
-import java.util.Map;
-
 import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Strings.isNullOrEmpty;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
-public class RomanConverter {
+public class RomanNumberConverter {
 
-    private Map<Character, Integer> romanSymbols = ImmutableMap.<Character, Integer>builder()
-            .put('I', 1)
-            .put('V', 5)
-            .put('X', 10)
-            .put('L', 50)
-            .put('C', 100)
-            .put('D', 500)
-            .put('M', 1000)
-            .build();
+    private final RomanNumberValidator romanNumberValidator;
 
-    public int toNumber(String roman) {
-        checkArgument(!isNullOrEmpty(roman), "Cannot convert roman number from a null or empty string");
+    public RomanNumberConverter(RomanNumberValidator romanNumberValidator) {
+        this.romanNumberValidator = checkNotNull(romanNumberValidator, "romanNumberValidator was null");
+    }
+
+    public int convert(String romanNumber) {
+        checkArgument(!isNullOrEmpty(romanNumber), "Cannot convert roman number from a null or empty string");
 
         int result = 0;
+        RomanSymbolsInProgress symbolsInProgress = null;
+        char[] symbols = romanNumber.toUpperCase().toCharArray();
 
-        char[] symbols = roman.toUpperCase().toCharArray();
-        Integer beforeOfBeforePreviousValue = null;
-        Integer beforePreviousValue = null;
-        Integer previousValue = null;
-        Integer currentValue;
         for (char symbol : symbols) {
-            RomanSymbolsInProgress symbolsInProgress = new RomanSymbolsInProgress(null, null, null, RomanSymbol.fromCharacter(symbol));
-            currentValue = romanSymbols.get(symbol);
-            if (nonNull(currentValue)) {
-                if (!isGoodCombination(beforeOfBeforePreviousValue, beforePreviousValue, previousValue, currentValue)) {
-                    if (isNull(previousValue) || previousValue >= currentValue) {
-                        result += currentValue;
-                    }
-                    else if (previousValue < currentValue) {
-                        result += currentValue - 2 * previousValue;
-                    }
-
-                    if (nonNull(previousValue)) {
-                        beforePreviousValue = previousValue;
-                    }
-                    previousValue = currentValue;
-                }
-                else {
-                    throw new IllegalArgumentException("Wrong combination of roman symbols " + roman);
-                }
+            symbolsInProgress = createRomanSymbolsInProgress(symbolsInProgress, RomanSymbol.fromCharacter(symbol));
+            if (romanNumberValidator.validate(symbolsInProgress)) {
+                if (isSubtractionRuleApplicable(symbolsInProgress))
+                    result += symbolsInProgress.getCurrentSymbol().getCode()
+                            - 2 * symbolsInProgress.getPreviousSymbol().getCode();
+                else
+                    result += symbolsInProgress.getCurrentSymbol().getCode();
             }
-            else {
-                throw new IllegalArgumentException("Found a non-roman symbol " + symbol);
-            }
+            else
+                throw new RomanNumberConversionException("Illegal roman number \"" + romanNumber + "\"");
         }
 
+        return result;
 
 //        // If the user passes it as a parameter, lowercase letters make it uppercase
 //        roman = roman.toUpperCase();
@@ -202,17 +184,30 @@ public class RomanConverter {
 //            }
 //            return result;
 //        }
-        return result;
+
     }
 
-    private boolean isGoodCombination(
-            Integer beforeOfBeforePreviousValue, Integer beforePreviousValue, Integer previousValue, Integer currentValue)
+    private RomanSymbolsInProgress createRomanSymbolsInProgress(
+            RomanSymbolsInProgress previousRomanSymbolsInProgress, RomanSymbol newCurrentSymbol)
     {
-        if (isNull(previousValue) || isNull(currentValue)) {
-            return false;
+        if (isNull(previousRomanSymbolsInProgress)) {
+            return new RomanSymbolsInProgress(null, null, null, newCurrentSymbol);
         }
 
-        return previousValue <= currentValue && (previousValue.equals(5) || previousValue.equals(50) || previousValue.equals(500))
-                || (nonNull(beforePreviousValue) && beforePreviousValue < currentValue && previousValue < currentValue);
+        RomanSymbol beforePreviousSymbol = previousRomanSymbolsInProgress.getBeforePreviousSymbol();
+        RomanSymbol previousSymbol = previousRomanSymbolsInProgress.getPreviousSymbol();
+        RomanSymbol currentSymbol = previousRomanSymbolsInProgress.getCurrentSymbol();
+
+        return new RomanSymbolsInProgress(
+                nonNull(beforePreviousSymbol) ? beforePreviousSymbol : null,
+                nonNull(previousSymbol) ? previousSymbol : null,
+                nonNull(currentSymbol) ? currentSymbol : null,
+                newCurrentSymbol);
+    }
+
+    private boolean isSubtractionRuleApplicable(RomanSymbolsInProgress symbolsInProgress) {
+        RomanSymbol previousSymbol = symbolsInProgress.getPreviousSymbol();
+        RomanSymbol currentSymbol = symbolsInProgress.getCurrentSymbol();
+        return nonNull(previousSymbol) && previousSymbol.getCode() < currentSymbol.getCode();
     }
 }

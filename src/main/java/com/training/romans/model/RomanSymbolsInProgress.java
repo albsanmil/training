@@ -1,7 +1,5 @@
 package com.training.romans.model;
 
-import com.training.romans.RomanSymbol;
-
 public final class RomanSymbolsInProgress {
 
     private final RomanSymbol lastBeforePreviousSymbol;
