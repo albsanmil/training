@@ -109,23 +109,8 @@ public class MatrixUtil {
         return true;
     }
 
-
     /**
      * Print this matrix if 5 is given
-
-     * |1|
-     *
-     * |1|2|
-     * |2|1|
-     *
-     * |1|2|3|
-     * |2|3|1|
-     * |3|1|2|
-     *
-     * |1|2|3|4|
-     * |2|3|4|1|
-     * |3|4|1|2|
-     * |4|1|2|3|
      *
      * |1|2|3|4|5|
      * |2|3|4|5|1|
@@ -133,26 +118,27 @@ public class MatrixUtil {
      * |4|5|1|2|3|
      * |5|1|2|3|4|
      *
-     * @param size the matrix of integer
-     * @return the matrix with the previous format presented, depending on the size parameter
+     * @param size The size of the matrix
+     * @return the matrix with the previous format presented, depending on the parameter size
      */
     public static int[][] createAndPrintMatrix(int size) {
-        checkArgument(size > 0, "Wrong cannot create a matrix of " + size + " * " + size);
+        checkArgument(size > 0, "Cannot create a matrix of " + size + "x" + size);
 
-        int value;
         int[][] matrixResult = new int[size][size];
         for (int i = 0; i < matrixResult.length; i++) {
-            value = i;
-            for (int j = 0; j <matrixResult[i].length; j++) {
-                if (value <= size) {
-                    if (value == size) {
-                        value = 1;
-                    }
-                    else {
-                        value += 1;
-                    }
-                    matrixResult[i][j] = value;
-                    System.out.print("|" + matrixResult[i][j]);
+
+            for (int j = 0; j < matrixResult[i].length; j++) {
+                if (j + i == size) {
+                    matrixResult[i][j] = 1;
+                    printMatrix(i, j, matrixResult);
+                }
+                else if (j + i > size) {
+                    matrixResult[i][j] = i;
+                    printMatrix(i, j, matrixResult);
+                }
+                else {
+                    matrixResult[i][j] = j + i + 1;
+                    printMatrix(i, j, matrixResult);
                 }
             }
             System.out.println("|");
@@ -160,5 +146,38 @@ public class MatrixUtil {
         System.out.println("..............................................................");
         return matrixResult;
     }
+
+    private static void printMatrix(int i, int j, int[][] matrixResult) {
+        System.out.print("|" + matrixResult[i][j]);
+    }
 }
+
+
+
+
+
+
+
+
+//    private static void printMatrix(int i, int j) {
+//        int value;
+//        int[][] matrixResult = new int[size][size];
+//        for (int i = 0; i < matrixResult.length; i++) {
+//            value = i;
+//            for (int j = 0; j <matrixResult[i].length; j++) {
+//                if (value <= size) {
+//                    if (value == size) {
+//                        value = 1;
+//                    }
+//                    else {
+//                        value += 1;
+//                    }
+//                    matrixResult[i][j] = value;
+//                    System.out.print("|" + matrixResult[i][j]);
+//                }
+//            }
+//            System.out.println("|");
+//        }
+//        System.out.println("..............................................................");
+//    }
 
