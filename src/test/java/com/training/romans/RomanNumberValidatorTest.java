@@ -141,8 +141,8 @@ public class RomanNumberValidatorTest {
             "C, I, I", "C, V, I", "C, X, I", "C, X, V", "C, X, X", "C, L, I", "C, L, V", "C, L, X", "C, C, I",
             "C, C, V", "C, C, X", "C, C, L", "D, I, I", "D, V, I", "D, X, I", "D, X, V", "D, X, X", "D, L, I",
             "D, L, V", "D, L, X", "D, C, I", "D, C, V", "D, C, X", "D, C, L", "D, C, C", "M, I, I", "M, V, I",
-            "M, X, I", "M, L, I", "M, C, I", "M, D, I", "M, X, V", "M, X, X", "M, L, V", "M, L, X", "M, C, V",
-            "M, C, X", "M, C, L", "M, C, C", "M, D, V", "M, D, X", "M, D, L", "M, D, C"
+            "M, X, I", "M, X, V", "M, X, X", "M, L, I", "M, L, V", "M, L, X", "M, C, I", "M, C, V", "M, C, X",
+            "M, C, L", "M, C, C", "M, D, I", "M, D, V", "M, D, X", "M, D, L", "M, D, C"
     })
     void when_RomanNumberWhereFirstSymbolGreaterOrEqualsThanSecondAndSecondGreaterThanThird_expect_SuccessfulValidation(
             char beforePreviousSymbol, char previousSymbol, char currentSymbol)
