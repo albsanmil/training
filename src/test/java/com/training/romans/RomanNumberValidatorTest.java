@@ -165,4 +165,6 @@ public class RomanNumberValidatorTest {
         assertEquals("Four last roman symbols \"first symbol is null, X, third symbol is null, X\" are in an "
                 + "inconsistent state for the validation", exception.getMessage());
     }
+
+    // Test these cases VIV LXL DCD
 }
