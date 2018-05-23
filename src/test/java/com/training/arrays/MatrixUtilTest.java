@@ -213,18 +213,6 @@ class MatrixUtilTest {
     }
 
     @Test
-    void given_SizeIsFour_when_isCreateAndPrintMatrixIsCalled_then_MatrixIsReturned() {
-        int matrixProof4[][] = {{1, 2, 3, 4},
-                                {2, 3, 4, 1},
-                                {3, 4, 1, 2},
-                                {4, 1, 2, 3}};
-
-        int[][] result = subject.createMatrix(4);
-
-        assertArrayEquals(matrixProof4, result, "The matrix is not correct");
-    }
-
-    @Test
     void given_SizeIsFive_when_isCreateAndPrintMatrixIsCalled_then_MatrixIsReturned() {
         int matrixProof5[][] = {{1, 2, 3, 4, 5},
                                 {2, 3, 4, 5, 1},
@@ -235,28 +223,6 @@ class MatrixUtilTest {
         int[][] result = subject.createMatrix(5);
 
         assertArrayEquals(matrixProof5, result, "The matrix is not correct");
-    }
-
-    @Test
-    void given_SizeIsFifteen_when_isCreateAndPrintMatrixIsCalled_then_MatrixIsReturned() {
-        int matrixProof15[][] = {{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14,15},
-                                 {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14,15, 1},
-                                 {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2},
-                                 {4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3},
-                                 {5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4},
-                                 {6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5},
-                                 {7, 8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6},
-                                 {8, 9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7},
-                                 {9, 10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8},
-                                 {10, 11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9},
-                                 {11, 12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-                                 {12, 13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11},
-                                 {13, 14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12},
-                                 {14, 15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13},
-                                 {15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14}};
-        int[][] result = subject.createMatrix(15);
-
-        assertArrayEquals(matrixProof15, result, "The matrix is not correct");
     }
 }
 
