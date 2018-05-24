@@ -99,14 +99,13 @@ public class RomanNumberValidator {
     private boolean areThreeRomanSymbolWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed(
             RomanSymbol beforePreviousSymbol, RomanSymbol previousSymbol, RomanSymbol currentSymbol)
     {
-        return nonNull(beforePreviousSymbol)
+        return (nonNull(beforePreviousSymbol)
                 && nonNull(previousSymbol)
                 && nonNull(currentSymbol)
-                && beforePreviousSymbol.equals(currentSymbol)
-                && currentSymbol.equals(RomanSymbol.V)
-                || currentSymbol.equals(RomanSymbol.L)
-                || currentSymbol.equals(RomanSymbol.D);
-
+                && beforePreviousSymbol.equals(currentSymbol))
+                && (beforePreviousSymbol.equals(RomanSymbol.V)
+                || beforePreviousSymbol.equals(RomanSymbol.L)
+                || beforePreviousSymbol.equals(RomanSymbol.D));
     }
 
     private boolean areTwoPreviousSymbolsSmallerThanCurrentSymbol(
