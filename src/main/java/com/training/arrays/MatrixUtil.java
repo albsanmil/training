@@ -138,10 +138,10 @@ public class MatrixUtil {
                     row[j] = value;
             }
         }
-        return printMatrix(matrix);
+        return matrix;
     }
 
-    private static int[][] printMatrix(int[][] matrix) {
+    public static void printMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             int[] row = matrix[i];
             for (int j = 0; j < row.length; j++) {
@@ -150,7 +150,6 @@ public class MatrixUtil {
             System.out.println('|');
         }
         System.out.println("..........................................");
-        return matrix;
     }
 }
 
