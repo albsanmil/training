@@ -1,5 +1,8 @@
 package com.training.arrays;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.google.common.base.Preconditions.checkArgument;
 
 public class MatrixUtil {
@@ -151,6 +154,22 @@ public class MatrixUtil {
         }
         System.out.println("..........................................");
     }
+
+    class Matrix {
+        private List<Cell> cells = new ArrayList<>();
+
+
+    }
+
+    class Cell {
+        private int rowIndex;
+        private int columnIndex;
+        private int  value;
+    }
+
+   // matrix[0][500000000000] = 0 + 500000000000 + 1;
+
+
 }
 
 
