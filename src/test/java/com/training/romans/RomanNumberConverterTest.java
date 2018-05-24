@@ -110,4 +110,16 @@ class RomanNumberConverterTest {
         assertEquals(convertedValue, result, "Wrong conversion, roman number '" + romanNumber
                 + "' cannot be converted to " + convertedValue);
     }
+
+    @DisplayName("Testing 4000 thousand")
+    @ParameterizedTest(name = "\"{0}\" is converted to {1}")
+    @CsvSource({"IV_, 4000", "IV_VI, 4006", "MMMCMLVIII_CMXLIV, 3958944"})
+    void when_RomanNumberTooLarge_expect_SuccessfulConversion(String romanNumber, int convertedValue) {
+        when(romanNumberValidator.validate(any(RomanSymbolsInProgress.class))).thenReturn(true);
+
+        int result = subject.convert(romanNumber);
+
+        assertEquals(convertedValue, result, "Wrong conversion, roman number '" + romanNumber
+                + "' cannot be converted to " + convertedValue);
+    }
 }

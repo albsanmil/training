@@ -26,16 +26,22 @@ public class RomanNumberConverter {
         char[] symbols = romanNumber.toUpperCase().toCharArray();
 
         for (char symbol : symbols) {
-            symbolsInProgress = createRomanSymbolsInProgress(symbolsInProgress, RomanSymbol.fromCharacter(symbol));
-            if (romanNumberValidator.validate(symbolsInProgress)) {
-                if (isSubtractionRuleApplicable(symbolsInProgress))
-                    result += symbolsInProgress.getCurrentSymbol().getCode()
-                            - 2 * symbolsInProgress.getPreviousSymbol().getCode();
-                else
-                    result += symbolsInProgress.getCurrentSymbol().getCode();
+            if (symbol == '_') {
+                result = result * 1000;
+                symbolsInProgress = null;
             }
-            else
-                throw new RomanNumberConversionException("Illegal roman number \"" + romanNumber + "\"");
+            else {
+                symbolsInProgress = createRomanSymbolsInProgress(symbolsInProgress, RomanSymbol.fromCharacter(symbol));
+                if (romanNumberValidator.validate(symbolsInProgress)) {
+                    if (isSubtractionRuleApplicable(symbolsInProgress))
+                        result += symbolsInProgress.getCurrentSymbol().getCode()
+                                - 2 * symbolsInProgress.getPreviousSymbol().getCode();
+                    else
+                        result += symbolsInProgress.getCurrentSymbol().getCode();
+                }
+                else
+                    throw new RomanNumberConversionException("Illegal roman number \"" + romanNumber + "\"");
+            }
         }
 
         return result;

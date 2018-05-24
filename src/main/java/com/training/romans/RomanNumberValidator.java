@@ -47,18 +47,11 @@ public class RomanNumberValidator {
                 return false;
         }
 
-        if (isPreviousRepeatedSymbolInvalid(previousSymbol, currentSymbol))
-            return false;
-
-        if (areThreePreviousSymbolsRepeated(lastBeforePreviousSymbol, beforePreviousSymbol, previousSymbol,
-                currentSymbol))
-            return false;
-
-        if (areTwoPreviousSymbolsSmallerThanCurrentSymbol(beforePreviousSymbol, previousSymbol, currentSymbol))
-            return false;
-
-        if (areThreeRomanSymbolWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed(
-                beforePreviousSymbol, previousSymbol, currentSymbol))
+        if (isPreviousRepeatedSymbolInvalid(previousSymbol, currentSymbol)
+                || areThreePreviousSymbolsRepeated(lastBeforePreviousSymbol, beforePreviousSymbol, previousSymbol,
+                currentSymbol)
+                || areTwoPreviousSymbolsSmallerThanCurrentSymbol(beforePreviousSymbol, previousSymbol, currentSymbol)
+                || isBeforePreviousRepeatedSymbolInvalid(beforePreviousSymbol, previousSymbol, currentSymbol))
             return false;
 
         return true;
@@ -96,28 +89,24 @@ public class RomanNumberValidator {
                 && previousSymbol.equals(currentSymbol);
     }
 
-    private boolean areThreeRomanSymbolWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed(
-            RomanSymbol beforePreviousSymbol, RomanSymbol previousSymbol, RomanSymbol currentSymbol)
-    {
-        return (nonNull(beforePreviousSymbol)
-                && nonNull(previousSymbol)
-                && nonNull(currentSymbol)
-                && beforePreviousSymbol.equals(currentSymbol))
-                && (beforePreviousSymbol.equals(RomanSymbol.V)
-                || beforePreviousSymbol.equals(RomanSymbol.L)
-                || beforePreviousSymbol.equals(RomanSymbol.D));
-    }
-
     private boolean areTwoPreviousSymbolsSmallerThanCurrentSymbol(
-            RomanSymbol beforePreviousSymbol,
-            RomanSymbol previousSymbol,
-            RomanSymbol currentSymbol)
+            RomanSymbol beforePreviousSymbol, RomanSymbol previousSymbol, RomanSymbol currentSymbol)
     {
         return nonNull(beforePreviousSymbol)
                 && nonNull(previousSymbol)
                 && nonNull(currentSymbol)
                 && beforePreviousSymbol.getCode() < currentSymbol.getCode()
                 && previousSymbol.getCode() < currentSymbol.getCode();
+    }
+
+    private boolean isBeforePreviousRepeatedSymbolInvalid(
+            RomanSymbol beforePreviousSymbol, RomanSymbol previousSymbol, RomanSymbol currentSymbol)
+    {
+        return nonNull(beforePreviousSymbol)
+                && nonNull(previousSymbol)
+                && nonNull(currentSymbol)
+                && beforePreviousSymbol.equals(currentSymbol)
+                && !validPreviousRepeatedSymbols.contains(beforePreviousSymbol);
     }
 
     private boolean areRomanSymbolsInProgressInAnInconsistentState(
