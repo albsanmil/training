@@ -57,6 +57,10 @@ public class RomanNumberValidator {
         if (areTwoPreviousSymbolsSmallerThanCurrentSymbol(beforePreviousSymbol, previousSymbol, currentSymbol))
             return false;
 
+        if (areThreeRomanSymbolWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed(
+                beforePreviousSymbol, previousSymbol, currentSymbol))
+            return false;
+
         return true;
     }
 
@@ -90,6 +94,19 @@ public class RomanNumberValidator {
                 && lastBeforePreviousSymbol.equals(currentSymbol)
                 && beforePreviousSymbol.equals(currentSymbol)
                 && previousSymbol.equals(currentSymbol);
+    }
+
+    private boolean areThreeRomanSymbolWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed(
+            RomanSymbol beforePreviousSymbol, RomanSymbol previousSymbol, RomanSymbol currentSymbol)
+    {
+        return nonNull(beforePreviousSymbol)
+                && nonNull(previousSymbol)
+                && nonNull(currentSymbol)
+                && beforePreviousSymbol.equals(currentSymbol)
+                && currentSymbol.equals(RomanSymbol.V)
+                || currentSymbol.equals(RomanSymbol.L)
+                || currentSymbol.equals(RomanSymbol.D);
+
     }
 
     private boolean areTwoPreviousSymbolsSmallerThanCurrentSymbol(

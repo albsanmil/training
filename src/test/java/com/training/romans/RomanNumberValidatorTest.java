@@ -166,5 +166,18 @@ public class RomanNumberValidatorTest {
                 + "inconsistent state for the validation", exception.getMessage());
     }
 
-    // Test these cases VIV LXL DCD
+    @DisplayName("Testing the Roman number where two \"V\" or two \"L\" or two \"D\" are repeated without being followed")
+    @ParameterizedTest(name = "\"{0}{1}{2}\" is not a valid roman number")
+    @CsvSource({"V, I, V", "L, X, L", "D, C, D"})
+    void when_InvalidRomanWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed_expect_FailedValidation(
+            char beforePreviousSymbol, char previousSymbol, char currentSymbol)
+    {
+        boolean result = subject.validate(getRomanSymbolsInProgress(
+                beforePreviousSymbol, previousSymbol, currentSymbol));
+
+        assertFalse(result, "Wrong validation, roman number '" + beforePreviousSymbol + previousSymbol + currentSymbol
+                + "' is not valid");
+
+    }
+
 }
