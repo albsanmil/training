@@ -111,9 +111,10 @@ class RomanNumberConverterTest {
                 + "' cannot be converted to " + convertedValue);
     }
 
-    @DisplayName("Testing 4000 thousand")
+    @DisplayName("Testing numbers greater than 4000")
     @ParameterizedTest(name = "\"{0}\" is converted to {1}")
-    @CsvSource({"IV_, 4000", "IV_VI, 4006", "MMMCMLVIII_CMXLIV, 3958944"})
+    @CsvSource({"IV_, 4000", "IV_VI, 4006", "VIII_XLIV, 8044", "MMMCMLVIII_CMXLIV, 3958944",
+            "MMCMXLIX_DCLVIII, 2949658"})
     void when_RomanNumberTooLarge_expect_SuccessfulConversion(String romanNumber, int convertedValue) {
         when(romanNumberValidator.validate(any(RomanSymbolsInProgress.class))).thenReturn(true);
 

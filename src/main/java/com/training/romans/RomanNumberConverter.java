@@ -7,7 +7,6 @@ import com.training.romans.model.RomanSymbolsInProgress;
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static com.google.common.base.Strings.isNullOrEmpty;
-import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
 public class RomanNumberConverter {
@@ -26,12 +25,14 @@ public class RomanNumberConverter {
         char[] symbols = romanNumber.toUpperCase().toCharArray();
 
         for (char symbol : symbols) {
-            if (symbol == '_') {
+            if (resultRequiresToBeMultipliedByThousand(symbol, result)) {
                 result = result * 1000;
                 symbolsInProgress = null;
             }
             else {
-                symbolsInProgress = createRomanSymbolsInProgress(symbolsInProgress, RomanSymbol.fromCharacter(symbol));
+                symbolsInProgress = RomanSymbolsInProgressFactory.create(
+                        symbolsInProgress, RomanSymbol.fromCharacter(symbol));
+
                 if (romanNumberValidator.validate(symbolsInProgress)) {
                     if (isSubtractionRuleApplicable(symbolsInProgress))
                         result += symbolsInProgress.getCurrentSymbol().getCode()
@@ -47,27 +48,13 @@ public class RomanNumberConverter {
         return result;
     }
 
-    private RomanSymbolsInProgress createRomanSymbolsInProgress(
-            RomanSymbolsInProgress previousRomanSymbolsInProgress, RomanSymbol newCurrentSymbol)
-    {
-        if (isNull(previousRomanSymbolsInProgress)) {
-            return new RomanSymbolsInProgress(null, null, null, newCurrentSymbol);
-        }
-
-        RomanSymbol beforePreviousSymbol = previousRomanSymbolsInProgress.getBeforePreviousSymbol();
-        RomanSymbol previousSymbol = previousRomanSymbolsInProgress.getPreviousSymbol();
-        RomanSymbol currentSymbol = previousRomanSymbolsInProgress.getCurrentSymbol();
-
-        return new RomanSymbolsInProgress(
-                nonNull(beforePreviousSymbol) ? beforePreviousSymbol : null,
-                nonNull(previousSymbol) ? previousSymbol : null,
-                nonNull(currentSymbol) ? currentSymbol : null,
-                newCurrentSymbol);
-    }
-
     private boolean isSubtractionRuleApplicable(RomanSymbolsInProgress symbolsInProgress) {
         RomanSymbol previousSymbol = symbolsInProgress.getPreviousSymbol();
         RomanSymbol currentSymbol = symbolsInProgress.getCurrentSymbol();
         return nonNull(previousSymbol) && previousSymbol.getCode() < currentSymbol.getCode();
+    }
+
+    private boolean resultRequiresToBeMultipliedByThousand(char currentSymbol, int result) {
+        return currentSymbol == '_' && result >= 4;
     }
 }
