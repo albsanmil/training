@@ -1,6 +1,6 @@
 package com.training.matrix;
 
-public class MatrixAccesor {
+public class MatrixAccessor {
 
     /**
      * Access the integer in position given by the row and column indexes.
@@ -12,14 +12,15 @@ public class MatrixAccesor {
      * |5|1|2|3|4|
      */
     public long access(long matrixSize, long rowIndex, long columnIndex) {
-        if (rowIndex + columnIndex + 1 == matrixSize)
-            return matrixSize;
+        long value = rowIndex + columnIndex + 1;
+        if (value <= matrixSize)
+            return value;
 
         return 0;
     }
 
     public static void main(String[] args) {
-        MatrixAccesor accesor = new MatrixAccesor();
+        MatrixAccessor accesor = new MatrixAccessor();
         System.out.println(accesor.access(5, 1, 3));
     }
 }
