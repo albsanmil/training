@@ -15,12 +15,14 @@ public class MatrixAccessor {
         long value = rowIndex + columnIndex + 1;
         if (value <= matrixSize)
             return value;
+        else if (value > matrixSize)
+            return ((rowIndex + columnIndex) - (matrixSize - 1));
 
         return 0;
     }
 
     public static void main(String[] args) {
-        MatrixAccessor accesor = new MatrixAccessor();
-        System.out.println(accesor.access(5, 1, 3));
+        MatrixAccessor accessor = new MatrixAccessor();
+        System.out.println(accessor.access(5, 2, 4));
     }
 }
