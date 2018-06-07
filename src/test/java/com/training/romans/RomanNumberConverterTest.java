@@ -1,57 +1,38 @@
 package com.training.romans;
 
-import com.training.mockito.MockitoExtension;
-import com.training.romans.exception.RomanNumberConversionException;
-import com.training.romans.model.RomanSymbolsInProgress;
+import com.google.common.testing.NullPointerTester;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
-import org.junit.platform.runner.JUnitPlatform;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.when;
 
-@ExtendWith(MockitoExtension.class)
-@RunWith(JUnitPlatform.class)
 class RomanNumberConverterTest {
-
-    @Mock
-    private RomanNumberValidator romanNumberValidator;
 
     private static RomanNumberConverter subject;
 
     @BeforeEach
     void setUp() {
-        subject = new RomanNumberConverter(romanNumberValidator);
+        subject = new RomanNumberConverter();
     }
 
     @DisplayName("Testing null argument")
     @Test
-    void when_NullArgument_expect_ExceptionThrown() {
-        assertThrows(IllegalArgumentException.class, () -> subject.convert(null));
+    void testNulls() {
+        NullPointerTester nullPointerTester = new NullPointerTester();
+        nullPointerTester.testAllPublicConstructors(RomanNumberConverter.class);
+        nullPointerTester.testAllPublicInstanceMethods(subject);
     }
 
-    @DisplayName("Testing empty string argument")
-    @Test
-    void when_EmptyStringArgument_expect_ExceptionThrown() {
-        assertThrows(IllegalArgumentException.class, () -> subject.convert(""));
-    }
+
 
     @DisplayName("Testing known roman symbol")
     @ParameterizedTest(name = "\"{0}\" is converted to {1}")
     @CsvSource({"I, 1", "V, 5", "X, 10", "L, 50", "C, 100", "D, 500", "M, 1000"})
     void when_KnownRomanSymbol_expect_SuccessfulConversion(String romanSymbol, int convertedValue) {
-        when(romanNumberValidator.validate(any(RomanSymbolsInProgress.class))).thenReturn(true);
-
-        int result = subject.convert(romanSymbol);
+        int result = subject.convert(RomanNumber.valueOf(romanSymbol));
 
         assertEquals(convertedValue, result, "Wrong conversion, roman number '" + romanSymbol
                 + "' cannot be converted to " + convertedValue);
@@ -63,27 +44,10 @@ class RomanNumberConverterTest {
     void when_PairsOfRomanSymbolsThatUseSubtractionRule_expect_SuccessfulConversion(
             String romanNumber, int convertedValue)
     {
-        when(romanNumberValidator.validate(any(RomanSymbolsInProgress.class))).thenReturn(true);
-
-        int result = subject.convert(romanNumber);
+        int result = subject.convert(RomanNumber.valueOf(romanNumber));
 
         assertEquals(convertedValue, result, "Wrong conversion, roman number '" + romanNumber
                 + "' cannot be converted to " + convertedValue);
-    }
-
-    @DisplayName("Testing roman number which symbols cannot be combined together")
-    @ParameterizedTest(name = "\"{0}\" cannot be converted because it is not a valid roman number")
-    @ValueSource(strings = {
-            "VV", "VX", "VL", "VC", "VD", "VM", "LC", "LL", "LD", "LM", "DD", "DM",
-            "IIV", "IIX", "VIX", "IXL", "XXL", "XXC", "XCD", "CCD", "CCM", "DCM",
-            "IIII", "XXXX", "CCCC", "MMMM"})
-    void when_RomanNumberWhichSymbolsCannotBeCombinedTogether_expect_FailedConversion(String romanNumber)
-    {
-        when(romanNumberValidator.validate(any(RomanSymbolsInProgress.class))).thenReturn(false);
-
-        Throwable exception = assertThrows(RomanNumberConversionException.class, () -> subject.convert(romanNumber));
-
-        assertEquals("Illegal roman number \"" + romanNumber + "\"", exception.getMessage());
     }
 
     @DisplayName("Testing roman number which symbols can be combined together")
@@ -103,9 +67,7 @@ class RomanNumberConverterTest {
     void when_RomanNumberWhichSymbolsCanBeCombinedTogether_expect_SuccessfulConversion(
             String romanNumber, int convertedValue)
     {
-        when(romanNumberValidator.validate(any(RomanSymbolsInProgress.class))).thenReturn(true);
-
-        int result = subject.convert(romanNumber);
+        int result = subject.convert(RomanNumber.valueOf(romanNumber));
 
         assertEquals(convertedValue, result, "Wrong conversion, roman number '" + romanNumber
                 + "' cannot be converted to " + convertedValue);
@@ -116,9 +78,7 @@ class RomanNumberConverterTest {
     @CsvSource({"IV_, 4000", "IV_VI, 4006", "VIII_XLIV, 8044", "MMMCMLVIII_CMXLIV, 3958944",
             "MMCMXLIX_DCLVIII, 2949658"})
     void when_RomanNumberTooLarge_expect_SuccessfulConversion(String romanNumber, int convertedValue) {
-        when(romanNumberValidator.validate(any(RomanSymbolsInProgress.class))).thenReturn(true);
-
-        int result = subject.convert(romanNumber);
+        int result = subject.convert(RomanNumber.valueOf(romanNumber));
 
         assertEquals(convertedValue, result, "Wrong conversion, roman number '" + romanNumber
                 + "' cannot be converted to " + convertedValue);
