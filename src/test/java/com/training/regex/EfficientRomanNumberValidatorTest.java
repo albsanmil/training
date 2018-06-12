@@ -109,6 +109,16 @@ public class EfficientRomanNumberValidatorTest {
         assertTrue(result, "Wrong validation, roman number '" + romanNumber + "' is valid");
     }
 
+    @DisplayName("Testing the rule of subtraction with more than two Roman symbols")
+    @ParameterizedTest(name = "\"{0}\" is a valid roman number")
+    @ValueSource(strings = {"MCM", "MMCM", "MMMCM", "CXC", "CCXC", "CCCXC", "XIX", "XXIX", "XXXIX"})
+    void when_ThreeRomanSymbolsOrMoreThatUseSubtractionRule_expect_SuccessfulValidation(String romanNumber)
+    {
+        boolean result = subject.validate(romanNumber);
+
+        assertTrue(result, "Wrong validation, roman number '" + romanNumber + "' is valid");
+    }
+
     @DisplayName("Testing pairs of roman symbols that first is less than second and do not use the subtraction rule")
     @ParameterizedTest(name = "\"{0}\" is not a valid roman number")
     @ValueSource(strings = {"VX", "VL", "VC", "VD", "VM", "LC", "LD", "LM", "DM"})
@@ -138,5 +148,16 @@ public class EfficientRomanNumberValidatorTest {
         boolean result = subject.validate(romanNumber);
 
         assertFalse(result, "Wrong validation, roman number '" + romanNumber + "' is not valid");
+    }
+
+    @DisplayName("Testing roman number greater than 3999")
+    @ParameterizedTest(name = "\"{0}\" is a valid roman number")
+    @ValueSource(strings = {"IV_", "V_", "VI_", "VII_", "VIII_", "IX_", "X_", "MDLV_X", "MMMCMLXXXVIII_DCXLIX", "I_", "III_" })
+    void when_RomanNumberGreaterTran3999_expect_SuccessfulValidation(
+            String romanNumber)
+    {
+        boolean result = subject.validate(romanNumber);
+
+        assertTrue(result, "Wrong validation, roman number '" + romanNumber + "' is valid");
     }
 }
