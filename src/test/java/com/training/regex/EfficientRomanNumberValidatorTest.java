@@ -152,12 +152,22 @@ public class EfficientRomanNumberValidatorTest {
 
     @DisplayName("Testing roman number greater than 3999")
     @ParameterizedTest(name = "\"{0}\" is a valid roman number")
-    @ValueSource(strings = {"IV_", "V_", "VI_", "VII_", "VIII_", "IX_", "X_", "MDLV_X", "MMMCMLXXXVIII_DCXLIX", "I_", "III_" })
-    void when_RomanNumberGreaterTran3999_expect_SuccessfulValidation(
-            String romanNumber)
+    @ValueSource(strings = {"IV_", "V_", "VI_", "VII_", "VIII_", "IX_", "X_", "MDLV_X", "MMMCMLXXXVIII_DCXLIX",
+           })
+    void when_RomanNumberGreaterTran3999_expect_SuccessfulValidation(String romanNumber)
     {
         boolean result = subject.validate(romanNumber);
 
         assertTrue(result, "Wrong validation, roman number '" + romanNumber + "' is valid");
+    }
+
+    @DisplayName("Testing roman number greater than 3999")
+    @ParameterizedTest(name = "\"{0}\" is not a valid roman number")
+    @ValueSource(strings = { "I_", "III_", "V__", "_V", "A_B", "_"})
+    void when_RomanNumberGreaterTran39999_expect_SuccessfulValidation(String romanNumber)
+    {
+        boolean result = subject.validate(romanNumber);
+
+        assertFalse(result, "Wrong validation, roman number '" + romanNumber + "' is not valid");
     }
 }
