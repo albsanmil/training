@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list id="692da701-86d9-46cf-8a03-67d9a5a08719" name="Temporal" comment="">
+    <list default="true" id="4996b105-6983-451a-96ad-34619b417d19" name="Default" comment="Validator time roman number. nanoTime(), currentTimeMillis().">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/training.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/training.iml" afterDir="false" />
-    </list>
-    <list default="true" id="f9af23c3-468d-4aa4-a3a6-b7001f78262d" name="Default" comment="Matrix with the previous format presented, depending on size">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/training.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/regex/EfficientRomanNumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/regex/EfficientRomanNumberValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidationBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidationBenchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidatorTest.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,68 +22,69 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/training$TwoDimensionArraysUtilTest_given_TwoDimensionArrayAndColumnIndexInRange_when_columnSumIsCalled_then_totalColumnSumIsReturned.ic" NAME="TwoDimensionArraysUtilTest.given_TwoDimensionArrayAndColumnIndexInRange_when_columnSumIsCalled_then_totalColumnSumIsReturned Coverage Results" MODIFIED="1525657294833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.training.arrays.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/training$Exercise5.ic" NAME="Exercise5 Coverage Results" MODIFIED="1524554866441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.training.arrays.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/training$Exercise4.ic" NAME="Exercise4 Coverage Results" MODIFIED="1524120135597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.training.basic.*</FILTER>
-    </SUITE>
-  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4824094">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="RomanNumberValidator.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberValidator.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#458#466#0" expanded="true" />
-                    <element signature="e#710#723#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RomanSymbol.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/model/RomanSymbol.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RomanSymbolsInProgress.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/model/RomanSymbolsInProgress.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="RomanNumberValidatorTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidatorTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Regex.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/Regex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EfficientRomanNumberValidatorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/training/regex/EfficientRomanNumberValidatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2669">
+              <caret line="165" column="33" selection-start-line="165" selection-start-column="33" selection-end-line="165" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EfficientRomanNumberValidator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/EfficientRomanNumberValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RomanNumberValidatorTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidatorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="146" column="73" lean-forward="true" selection-start-line="146" selection-start-column="73" selection-end-line="146" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RomanNumberValidationBenchmark.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidationBenchmark.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="romanNumbers" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/romans/romanNumbers">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56304">
+              <caret line="3312" column="7" selection-start-line="3312" selection-start-column="7" selection-end-line="3312" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -99,57 +105,21 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/arrays/Exercise5.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/datatypes/Exercise9.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/datatypes/Exercise7.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise9.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/basic/Exercise10.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/basic/B_Exercise10.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/Rectangle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/Square.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/Triangle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/Circle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/Shape.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/BreakAndContinue.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/address/SpanishAddressUsage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/model/Shape.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/model/Circle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/model/Rectangle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/model/Pentagon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/ShapeApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/util/ShapeUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/model/Square.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/inheritance/shape/model/Triangle.java" />
-        <option value="$PROJECT_DIR$/.flooignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/arrays/TwoDimensionArraysUtil.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/training/arrays/TwoDimensionArraysUtilTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/exercise/collections/C_Exercise3.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/exercise/collections/C_Exercise1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/exercise/collections/C_Exercise4.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/exercise/collections/C_Exercise5.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/exercise/collections/C_Exercise6.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/exercise/collections/linkedlist/LL_Exercise1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/exercise/collections/treeset/TS_Exercise1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/exercise/collections/linkedlist/LL_Exercise4.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/exercise/collections/treeset/TS_Exercise4.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/romans/RomansApplication.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/training/romans/RomanConverterTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/romans/RomanConverter.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/training/romans/RepeatedSymbolCounterTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/training/romans/RepeatedSymbolValidatorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/romans/RepeatedSymbolValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/romans/SubtractionRuleValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/romans/RomanValidator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/training/mockito/MockitoExtension.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/training/arrays/MatrixUtilTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberConverterTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixUtil.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/training/matrix/matrixAccessorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/training/matrix/MatrixAccessorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/matrix/MatrixAccessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/proof/Proof1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/proof/regex.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/proof/Regex.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/regex/Regex.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/training/regex/RomanRegexTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/regex/RomanRegex.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/training/regex/EfficientRomanNumberValidatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/training/regex/EfficientRomanNumberValidator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidationBenchmark.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidatorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberValidator.java" />
       </list>
     </option>
   </component>
@@ -160,20 +130,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="training" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="12" />
+    <option name="y" value="31" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -185,7 +144,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -237,6 +195,70 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="exercise" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="matrix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="regex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
               <item name="romans" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -258,6 +280,15 @@
               <item name="training" type="462c0819:PsiDirectoryNode" />
               <item name="romans" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="training" type="b2602c69:ProjectViewProjectNode" />
@@ -296,7 +327,25 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="matrix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
               <item name="mockito" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="regex" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="training" type="b2602c69:ProjectViewProjectNode" />
@@ -317,18 +366,34 @@
               <item name="romans" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="training" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="romans" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="RomanNumberValidation&#9;PSI&#9;JAVA://com.training.romans.RomanNumberValidationBenchmark" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -369,7 +434,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbolRepeatedTwiceWithoutBeingFollowed_expect_FailedValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RomanNumberValidatorTest.when_InvalidRomanWithTheSameSmallerSymbolRepeatedTwiceFollowedByLargerSymbol_expect_FailedValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="training" />
       <extension name="coverage">
         <pattern>
@@ -381,7 +446,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.training.romans" />
       <option name="MAIN_CLASS_NAME" value="com.training.romans.RomanNumberValidatorTest" />
-      <option name="METHOD_NAME" value="when_InvalidRomanWithTheSameSymbolRepeatedTwiceWithoutBeingFollowed_expect_FailedValidation(char,char,char)" />
+      <option name="METHOD_NAME" value="when_InvalidRomanWithTheSameSmallerSymbolRepeatedTwiceFollowedByLargerSymbol_expect_FailedValidation(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -392,7 +457,7 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed_expect_FailedValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbolRepeatedTwiceSeparatedByAnotherSmallerSymbol_expect_FailedValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="training" />
       <extension name="coverage">
         <pattern>
@@ -404,7 +469,30 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.training.romans" />
       <option name="MAIN_CLASS_NAME" value="com.training.romans.RomanNumberValidatorTest" />
-      <option name="METHOD_NAME" value="when_InvalidRomanWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed_expect_FailedValidation(char,char,char)" />
+      <option name="METHOD_NAME" value="when_InvalidRomanWithTheSameSymbolRepeatedTwiceSeparatedByAnotherSmallerSymbol_expect_FailedValidation(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="RomanNumberValidatorTest.when_RomanNumberWhereFirstSymbolGreaterOrEqualsThanSecondAndSecondGreaterThanThird_expect_SuccessfulValidation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="training" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.training.romans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.training.romans" />
+      <option name="MAIN_CLASS_NAME" value="com.training.romans.RomanNumberValidatorTest" />
+      <option name="METHOD_NAME" value="when_RomanNumberWhereFirstSymbolGreaterOrEqualsThanSecondAndSecondGreaterThanThird_expect_SuccessfulValidation(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -427,7 +515,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.training.romans" />
       <option name="MAIN_CLASS_NAME" value="com.training.romans.RomanNumberValidatorTest" />
-      <option name="METHOD_NAME" value="when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown(char,char)" />
+      <option name="METHOD_NAME" value="when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -437,32 +525,6 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
-    </configuration>
-    <configuration name="[engine:junit-jupiter]/[class:com.training.romans.RomanNumberValidatorTest]/[test-template:when_PairsOfRomanSymbolsThatFirstGreaterThanSecond_expect_SuccessfulValidation(char, char)]/[test-template-invocation:#1]" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="training" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.training.romans.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.training.romans" />
-      <option name="MAIN_CLASS_NAME" value="com.training.romans.RomanNumberValidatorTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="uniqueId" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-      <uniqueIds>
-        <uniqueId value="[engine:junit-jupiter]/[class:com.training.romans.RomanNumberValidatorTest]/[test-template:when_PairsOfRomanSymbolsThatFirstGreaterThanSecond_expect_SuccessfulValidation(char, char)]/[test-template-invocation:#1]" />
-      </uniqueIds>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -503,19 +565,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbolRepeatedTwiceWithoutBeingFollowed_expect_FailedValidation" />
-      <item itemvalue="JUnit.RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed_expect_FailedValidation" />
-      <item itemvalue="JUnit.RomanNumberValidatorTest" />
-      <item itemvalue="JUnit.[engine:junit-jupiter]/[class:com.training.romans.RomanNumberValidatorTest]/[test-template:when_PairsOfRomanSymbolsThatFirstGreaterThanSecond_expect_SuccessfulValidation(char, char)]/[test-template-invocation:#1]" />
+      <item itemvalue="JUnit.RomanNumberValidatorTest.when_InvalidRomanWithTheSameSmallerSymbolRepeatedTwiceFollowedByLargerSymbol_expect_FailedValidation" />
+      <item itemvalue="JUnit.RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbolRepeatedTwiceSeparatedByAnotherSmallerSymbol_expect_FailedValidation" />
       <item itemvalue="JUnit.RomanNumberValidatorTest.when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown" />
+      <item itemvalue="JUnit.RomanNumberValidatorTest.when_RomanNumberWhereFirstSymbolGreaterOrEqualsThanSecondAndSecondGreaterThanThird_expect_SuccessfulValidation" />
+      <item itemvalue="JUnit.RomanNumberValidatorTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RomanNumberValidatorTest" />
-        <item itemvalue="JUnit.RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed_expect_FailedValidation" />
+        <item itemvalue="JUnit.RomanNumberValidatorTest.when_RomanNumberWhereFirstSymbolGreaterOrEqualsThanSecondAndSecondGreaterThanThird_expect_SuccessfulValidation" />
         <item itemvalue="JUnit.RomanNumberValidatorTest.when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown" />
-        <item itemvalue="JUnit.[engine:junit-jupiter]/[class:com.training.romans.RomanNumberValidatorTest]/[test-template:when_PairsOfRomanSymbolsThatFirstGreaterThanSecond_expect_SuccessfulValidation(char, char)]/[test-template-invocation:#1]" />
-        <item itemvalue="JUnit.RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbolRepeatedTwiceWithoutBeingFollowed_expect_FailedValidation" />
+        <item itemvalue="JUnit.RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbolRepeatedTwiceSeparatedByAnotherSmallerSymbol_expect_FailedValidation" />
+        <item itemvalue="JUnit.RomanNumberValidatorTest.when_InvalidRomanWithTheSameSmallerSymbolRepeatedTwiceFollowedByLargerSymbol_expect_FailedValidation" />
       </list>
     </recent_temporary>
   </component>
@@ -524,418 +586,128 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f9af23c3-468d-4aa4-a3a6-b7001f78262d" name="Default" comment="" />
-      <created>1523642641481</created>
+      <changelist id="4996b105-6983-451a-96ad-34619b417d19" name="Default" comment="" />
+      <created>1527773487519</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1523642641481</updated>
+      <updated>1527773487519</updated>
     </task>
-    <task id="LOCAL-00001" summary="Inheritance addresses example">
-      <created>1525195139187</created>
+    <task id="LOCAL-00001" summary="Refactored matrix specific format exercise">
+      <created>1527775292347</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1525195139187</updated>
+      <updated>1527775292348</updated>
     </task>
-    <task id="LOCAL-00002" summary="Add break and continue usage example">
-      <created>1525275956625</created>
+    <task id="LOCAL-00002" summary="Regular expresion. Roman number">
+      <created>1528305361340</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1525275956625</updated>
+      <updated>1528305361340</updated>
     </task>
-    <task id="LOCAL-00003" summary="Add first inheritance example with different shapes">
-      <created>1525276305011</created>
+    <task id="LOCAL-00003" summary="Regular expresion. Roman number">
+      <created>1528305408833</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1525276305011</updated>
+      <updated>1528305408833</updated>
     </task>
-    <task id="LOCAL-00004" summary="Add SpanishAddress class">
-      <created>1525276513916</created>
+    <task id="LOCAL-00004" summary="Regular expresion. Roman number">
+      <created>1528398521076</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1525276513916</updated>
+      <updated>1528398521076</updated>
     </task>
-    <task id="LOCAL-00005" summary="Refactored calculation of shape areas filtering by height">
-      <created>1525445066815</created>
+    <task id="LOCAL-00005" summary="Regular expresion. Roman number">
+      <created>1528780824042</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1525445066816</updated>
+      <updated>1528780824042</updated>
     </task>
-    <task id="LOCAL-00006" summary="Refactored exercises">
-      <created>1525445641363</created>
+    <task id="LOCAL-00006" summary="Regular expresion. Roman number. Calculate times">
+      <created>1528911031901</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1525445641363</updated>
+      <updated>1528911031901</updated>
     </task>
-    <task id="LOCAL-00007" summary="Text and two-dimensional arrays 1.0">
-      <created>1525668404077</created>
+    <task id="LOCAL-00007" summary="Validator time roman number. nanoTime(), currentTimeMillis().">
+      <created>1528961320529</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1525668404077</updated>
+      <updated>1528961320529</updated>
     </task>
-    <task id="LOCAL-00008" summary="Text and two-dimensional arrays 2.0">
-      <created>1525744214333</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1525744214333</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Rename class and tests">
-      <created>1525788950728</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1525788950728</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Text and two-dimensional arrays 3.0">
-      <created>1525796347003</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1525796347003</updated>
-    </task>
-    <task id="LOCAL-00011" summary="The Collections Framework 1.0">
-      <created>1525796418975</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1525796418975</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Text and two-dimensional arrays 4.0">
-      <created>1525834090211</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1525834090211</updated>
-    </task>
-    <task id="LOCAL-00013" summary="The Collections Framework 2.0">
-      <created>1525844558120</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1525844558120</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Examples of searching in lists and how to override the methods &quot;equals&quot; and &quot;hashcode&quot;.">
-      <created>1525883490011</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1525883490011</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Rename array list exercises">
-      <created>1525886618969</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1525886618969</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Add given_IrregularMatrix_when_allRowsSumsIsCalled_then_totalRowsIsReturnedInArray()">
-      <created>1525886882691</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1525886882691</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Initiation of exercises with linkedlist">
-      <created>1525886990449</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1525886990449</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Initiation of exercises with TreeSet">
-      <created>1525887019098</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1525887019098</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Add given_EmptyIrregularMatrix_when_allRowsSumsIsCalled_then_wrongIsReturned">
-      <created>1525936343092</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1525936343092</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Add EmptyMatrix_when_allRowsSumsIsCalled_then_noSumIsReturned">
-      <created>1526007533171</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1526007533171</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Arraylist last modification of exercises.">
-      <created>1526008120216</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1526008120216</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Add the tests: given_EmptyMatrix_when_isRowMagicIsCalled_then_falseIsReturned&#10;               give_RowMagicMatrixWithAllNegative_when_isRowMagicIsCalled_then_trueIsReturned">
-      <created>1526010866711</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1526010866711</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Add the test: given_NonRowMagicMatrix_when_isRowMagicIsCalled_then_falseIsReturned&#10;Delete the test: give_RowMagicMatrixWithAllNegative_when_isRowMagicIsCalled_then_trueIsReturned&#10;Refactor the test: given_EmptyMatrix_when_isRowMagicIsCalled_then_falseIsReturned&#10;Refactor the method: isRowMagic">
-      <created>1526053906733</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1526053906734</updated>
-    </task>
-    <task id="LOCAL-00024" summary="First exercises with Linkedlist">
-      <created>1526053998215</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1526053998215</updated>
-    </task>
-    <task id="LOCAL-00025" summary="First exercises with TreeSet">
-      <created>1526054044614</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1526054044614</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Roman Numbers and Test">
-      <created>1526275718485</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1526275718485</updated>
-    </task>
-    <task id="LOCAL-00027" summary="The latest modifications">
-      <created>1526275822397</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1526275822397</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Roman Number. For it to work I implement the same code three times in different parts of the method so that I get three tests">
-      <created>1526276358663</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1526276358663</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Roman Number. Attempt to implement the ninth test but compiling it fails another test">
-      <created>1526279863030</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1526279863031</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Roman numbers and tests. Refactoring the code with the teacher.">
-      <created>1526319462194</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1526319462194</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Refactoring the Roman numbers. Separating the validate and convert test.">
-      <created>1526406454006</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1526406454006</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Extracted repeating symbol validator and implemented its tests">
-      <created>1526492206366</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1526492206366</updated>
-    </task>
-    <task id="LOCAL-00033" summary="First try to merge all the validations together">
-      <created>1526576293246</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1526576293246</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Matrix with the previous format presented, depending on the size parameter">
-      <created>1526626061253</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1526626061253</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Method to receive an integer &gt;= 1 and create a matrix.&#10;Example:&#10;Integer = 3   Matrix: |1|2|3|&#10;                      |2|3|1|&#10;                      |3|1|2|">
-      <created>1526777616894</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1526777616894</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Method to receive an integer &gt;= 1 and create a matrix. Play with a method.">
-      <created>1526809666847</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1526809666847</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Introduced the concept of roman symbols in progress to keep the previous symbols and refactored and removed some classes and tests">
-      <created>1526926430349</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1526926430350</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Refactoring create and print matrix given a size">
-      <created>1526964746566</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1526964746566</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Finished the roman number validator and its tests">
-      <created>1527001678920</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1527001678921</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Refactoring for Alvaro create and print matrix given a size">
-      <created>1527001925137</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1527001925137</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Moved roman symbol class and its tests to the model package">
-      <created>1527002709621</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1527002709621</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Implemented almost the roman number converter and its tests">
-      <created>1527011730616</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1527011730616</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Implemented almost the RomanNumberConverterTest and RomanNumberValidatorTest.">
-      <created>1527065713459</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1527065713461</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Refactoring created and print matrix given size">
-      <created>1527067059510</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1527067059510</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Analysis and scrapping of the initial code. Refactoring">
-      <created>1527094182393</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1527094182393</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Refactoring the matrix application">
-      <created>1527130473228</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1527130473228</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Refactoring validator for these three cases: VIV LXL DCD">
-      <created>1527135320878</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1527135320878</updated>
-    </task>
-    <option name="localTasksCounter" value="48" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RomanNumberValidatorTest_when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown - 2018.05.24 at 00h 28m 19s.xml">
+    <history-entry file="RomanNumberValidatorTest_when_PairsOfRomanSymbolsThatDoNotUseSubtractionRule_expect_FailedValidation - 2018.06.14 at 11h 55m 56s.xml">
+      <configuration name="RomanNumberValidatorTest.when_PairsOfRomanSymbolsThatDoNotUseSubtractionRule_expect_FailedValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RomanNumberValidatorTest_when_PairsOfRomanSymbolsThatFirstGreaterThanSecond_expect_SuccessfulValidation - 2018.06.14 at 11h 58m 56s.xml">
+      <configuration name="RomanNumberValidatorTest.when_PairsOfRomanSymbolsThatFirstGreaterThanSecond_expect_SuccessfulValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RomanNumberValidatorTest_when_ValidRomanWithTheSameSymbolRepeatedTwice_expect_SuccessfulValidation - 2018.06.14 at 12h 00m 11s.xml">
+      <configuration name="RomanNumberValidatorTest.when_ValidRomanWithTheSameSymbolRepeatedTwice_expect_SuccessfulValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RomanNumberValidatorTest_when_InvalidRomanWithTheSameSymbolRepeatedTwice_expect_FailedValidation - 2018.06.14 at 12h 09m 50s.xml">
+      <configuration name="RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbolRepeatedTwice_expect_FailedValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RomanNumberValidatorTest_when_ValidRomanWithTheSameSymbolRepeatedThreeTimes_expect_SuccessfulValidation - 2018.06.14 at 12h 11m 06s.xml">
+      <configuration name="RomanNumberValidatorTest.when_ValidRomanWithTheSameSymbolRepeatedThreeTimes_expect_SuccessfulValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RomanNumberValidatorTest_when_ValidRomanWithTheSameSymbolRepeatedFourTimes_expect_FailedValidation - 2018.06.14 at 12h 12m 27s.xml">
+      <configuration name="RomanNumberValidatorTest.when_ValidRomanWithTheSameSymbolRepeatedFourTimes_expect_FailedValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RomanNumberValidatorTest_when_InvalidRomanWithTheSameSmallerSymbolRepeatedTwiceFollowedByLargerSymbol_expect_FailedValidation - 2018.06.14 at 12h 13m 53s.xml">
+      <configuration name="RomanNumberValidatorTest.when_InvalidRomanWithTheSameSmallerSymbolRepeatedTwiceFollowedByLargerSymbol_expect_FailedValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RomanNumberValidatorTest_when_InvalidRomanWithTheSameSymbolRepeatedTwiceSeparatedByAnotherSmallerSymbol_expect_FailedValidation - 2018.06.14 at 12h 15m 03s.xml">
+      <configuration name="RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbolRepeatedTwiceSeparatedByAnotherSmallerSymbol_expect_FailedValidation" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RomanNumberValidatorTest_when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown - 2018.06.14 at 12h 17m 13s.xml">
       <configuration name="RomanNumberValidatorTest.when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RomanNumberValidatorTest_when_InvalidRomanWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed_expect_FailedValidation - 2018.05.24 at 00h 28m 25s.xml">
-      <configuration name="RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed_expect_FailedValidation" configurationId="JUnit" />
+    <history-entry file="RomanNumberValidatorTest_when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown - 2018.06.14 at 12h 17m 37s.xml">
+      <configuration name="RomanNumberValidatorTest.when_RomanSymbolsInProgressHasAnInconsistentState_then_ExceptionThrown" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RomanNumberValidatorTest - 2018.05.24 at 00h 28m 33s.xml">
-      <configuration name="RomanNumberValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RomanNumberValidatorTest - 2018.05.24 at 00h 30m 36s.xml">
-      <configuration name="RomanNumberValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RomanNumberValidatorTest - 2018.05.24 at 00h 31m 45s.xml">
-      <configuration name="RomanNumberValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RomanNumberValidatorTest - 2018.05.24 at 00h 32m 47s.xml">
-      <configuration name="RomanNumberValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RomanNumberValidatorTest - 2018.05.24 at 00h 34m 10s.xml">
-      <configuration name="RomanNumberValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RomanNumberValidatorTest - 2018.05.24 at 00h 35m 58s.xml">
-      <configuration name="RomanNumberValidatorTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RomanNumberValidatorTest_when_InvalidRomanWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed_expect_FailedValidation - 2018.05.24 at 00h 36m 12s.xml">
-      <configuration name="RomanNumberValidatorTest.when_InvalidRomanWithTheSameSymbol_V_L_or_D_RepeatedTwiceWithoutBeingFollowed_expect_FailedValidation" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RomanNumberValidatorTest - 2018.05.24 at 00h 36m 22s.xml">
-      <configuration name="RomanNumberValidatorTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32924107" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.21763393" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info id="Image Layers" order="1" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32924107" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32954547" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32924107" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3203125" />
-      <window_info anchor="bottom" id="Floobits" order="7" weight="0.38839287" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.28348213" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.28304905" />
-      <window_info id="Learn" order="5" weight="0.32995737" />
-      <window_info id="Structure" order="4" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32924107" />
+      <window_info anchor="bottom" id="Floobits" order="7" weight="0.32924107" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32924107" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23987207" />
+      <window_info id="Learn" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3549107" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955357" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.390625" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -944,376 +716,391 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add the test: given_NonRowMagicMatrix_when_isRowMagicIsCalled_then_falseIsReturned&#10;Delete the test: give_RowMagicMatrixWithAllNegative_when_isRowMagicIsCalled_then_trueIsReturned&#10;Refactor the test: given_EmptyMatrix_when_isRowMagicIsCalled_then_falseIsReturned&#10;Refactor the method: isRowMagic" />
-    <MESSAGE value="First exercises with Linkedlist" />
-    <MESSAGE value="First exercises with TreeSet" />
-    <MESSAGE value="Roman Numbers and Test" />
-    <MESSAGE value="The latest modifications" />
-    <MESSAGE value="Roman Number. For it to work I implement the same code three times in different parts of the method so that I get three tests" />
-    <MESSAGE value="Roman Number. Attempt to implement the ninth test but compiling it fails another test" />
-    <MESSAGE value="Roman numbers and tests. Refactoring the code with the teacher." />
-    <MESSAGE value="Refactoring the Roman numbers. Separating the validate and convert test." />
-    <MESSAGE value="Extracted repeating symbol validator and implemented its tests" />
-    <MESSAGE value="First try to merge all the validations together" />
-    <MESSAGE value="Matrix with the previous format presented, depending on the size parameter" />
-    <MESSAGE value="Method to receive an integer &gt;= 1 and create a matrix.&#10;Example:&#10;Integer = 3   Matrix: |1|2|3|&#10;                      |2|3|1|&#10;                      |3|1|2|" />
-    <MESSAGE value="Method to receive an integer &gt;= 1 and create a matrix. Play with a method." />
-    <MESSAGE value="Introduced the concept of roman symbols in progress to keep the previous symbols and refactored and removed some classes and tests" />
-    <MESSAGE value="Refactoring create and print matrix given a size" />
-    <MESSAGE value="Finished the roman number validator and its tests" />
-    <MESSAGE value="Refactoring for Alvaro create and print matrix given a size" />
-    <MESSAGE value="Moved roman symbol class and its tests to the model package" />
-    <MESSAGE value="Implemented almost the roman number converter and its tests" />
-    <MESSAGE value="Implemented almost the RomanNumberConverterTest and RomanNumberValidatorTest." />
-    <MESSAGE value="Refactoring created and print matrix given size" />
-    <MESSAGE value="Analysis and scrapping of the initial code. Refactoring" />
-    <MESSAGE value="Refactoring the matrix application" />
-    <MESSAGE value="Refactoring validator for these three cases: VIV LXL DCD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring validator for these three cases: VIV LXL DCD" />
+    <MESSAGE value="Refactored matrix specific format exercise" />
+    <MESSAGE value="Regular expresion. Roman number" />
+    <MESSAGE value="Regular expresion. Roman number. Calculate times" />
+    <MESSAGE value="Validator time roman number. nanoTime(), currentTimeMillis()." />
+    <option name="LAST_COMMIT_MESSAGE" value="Validator time roman number. nanoTime(), currentTimeMillis()." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixUtil.java</url>
-          <line>130</line>
-          <properties />
-          <option name="timeStamp" value="243" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="244" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/collections/C_Exercise1.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/EfficientRomanNumberValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/matrix/MatrixAccessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/collections/arraylist/AL_Exercise1.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/collections/treeset/TS_Exercise1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/TreeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="92" column="23" lean-forward="true" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/NavigableSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="85" column="21" selection-start-line="85" selection-start-column="21" selection-end-line="85" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/collections/linkedlist/LL_Exercise4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/collections/treeset/TS_Exercise4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/collections/linkedlist/LL_Exercise1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="68">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.1.1/junit-jupiter-api-5.1.1.jar!/org/junit/jupiter/api/Assertions.class">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/regex/EfficientRomanNumberValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
+        <state relative-caret-position="68">
+          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.1.1/junit-jupiter-engine-5.1.1.jar!/org/junit/jupiter/engine/execution/ExecutableInvoker.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/EfficientRomanNumberValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="221">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/HashMap.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/Regex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1434" selection-start-line="1434" selection-end-line="1434" />
+        <state relative-caret-position="272">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="659" selection-start-line="659" selection-end-line="659" />
+        <state relative-caret-position="425">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.1.1/junit-jupiter-api-5.1.1.jar!/org/junit/jupiter/api/AssertThrows.class">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/matrix/MatrixAccessorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="27" column="129" selection-start-line="27" selection-start-column="129" selection-end-line="27" selection-end-column="129" />
+        <state relative-caret-position="85">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.1.1/junit-platform-engine-1.1.1.jar!/org/junit/platform/engine/support/hierarchical/HierarchicalTestExecutor.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.1.1/junit-platform-engine-1.1.1.jar!/org/junit/platform/engine/support/hierarchical/SingleTestExecutor.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/Regex.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.1.1/junit-jupiter-engine-5.1.1.jar!/org/junit/jupiter/engine/execution/ThrowableCollector.class">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/regex/EfficientRomanNumberValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.1.1/junit-jupiter-engine-5.1.1.jar!/org/junit/jupiter/engine/descriptor/TestMethodTestDescriptor.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/EfficientRomanNumberValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="138" selection-start-line="138" selection-end-line="138" />
+        <state relative-caret-position="153">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RepeatedSymbolValidator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomanValidator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/matrix/MatrixAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/Regex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/EfficientRomanNumberValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/regex/EfficientRomanNumberValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/matrix/MatrixAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="138" column="23" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/matrix/MatrixAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/matrix/MatrixAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="138" column="23" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/matrix/MatrixAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/matrix/MatrixAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="138" column="23" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/matrix/MatrixAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/matrix/MatrixAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="138" column="23" lean-forward="true" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="83" column="20" lean-forward="true" selection-start-line="72" selection-start-column="3" selection-end-line="100" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/matrix/MatrixAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="138" column="23" selection-start-line="138" selection-start-column="23" selection-end-line="138" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/model/RomanSymbolTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="10" lean-forward="true" selection-start-line="21" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/matrix/MatrixAccessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberConverterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-790">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomanSymbolsInProgressFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RepeatedSymbolValidatorTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/PrimeUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1107">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanValidatorTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomanSymbolsInProgress.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/SubtractionRuleValidator.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.1.1/junit-platform-commons-1.1.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.1.1/junit-jupiter-api-5.1.1.jar!/org/junit/jupiter/api/function/Executable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="205" column="23" lean-forward="true" selection-start-line="205" selection-start-column="23" selection-end-line="205" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/arrays/A_Exercise5.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/arrays/A_Exercise2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/basic/B_Exercise10.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-629">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/basic/B_Exercise2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/basic/B_Exercise3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/basic/B_Exercise1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/basic/B_Exercise4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/exercise/basic/B_Exercise7.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomansApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="128" column="11" selection-start-line="128" selection-start-column="11" selection-end-line="128" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/arrays/MatrixApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/arrays/MatrixUtilTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="205" column="12" selection-start-line="205" selection-start-column="12" selection-end-line="205" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberConverterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanSymbolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/TestObjectsFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/model/RomanSymbolTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/mockito/MockitoExtension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-201">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/model/RomanSymbolsInProgress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomansApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/exception/RomanNumberConversionException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomanSymbol.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/collections/model/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/model/RomanSymbol.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/collections/exception/BookNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/regex/EfficientRomanNumberValidatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2669">
+          <caret line="165" column="33" selection-start-line="165" selection-start-column="33" selection-end-line="165" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/Regex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#399#400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/23.0/guava-23.0.jar!/com/google/common/base/Preconditions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/romans/romanNumbers">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56304">
+          <caret line="3312" column="7" selection-start-line="3312" selection-start-column="7" selection-end-line="3312" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/regex/EfficientRomanNumberValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidationBenchmark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/training/romans/RomanNumberValidatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/training/romans/RomanNumberValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
-          <folding>
-            <element signature="e#458#466#0" expanded="true" />
-            <element signature="e#710#723#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="400">
+          <caret line="146" column="73" lean-forward="true" selection-start-line="146" selection-start-column="73" selection-end-line="146" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -1369,7 +1156,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>training</last-edited>
+          <last-edited>main</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1381,6 +1168,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1392,6 +1180,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: com.google.code.findbugs:jsr305:1.3.9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

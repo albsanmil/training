@@ -13,7 +13,7 @@ public class RomanNumberConverter {
 
         int result = 0;
         RomanSymbolsInProgress symbolsInProgress = null;
-        char[] symbols = romanNumber.getRomanNumber().toCharArray();
+        char[] symbols = romanNumber.getSymbols().toCharArray();
 
         for (char symbol : symbols) {
             if (resultRequiresToBeMultipliedByThousand(symbol, result)) {

@@ -10,7 +10,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
-public class RomanNumberValidator {
+public class RomanNumberValidator implements Validator {
 
     private Set<String> validPairsUsingSubtractionRule = ImmutableSet.<String>builder()
             .add("IV")
@@ -28,7 +28,23 @@ public class RomanNumberValidator {
             .add(RomanSymbol.M)
             .build();
 
-    public boolean validate(RomanSymbolsInProgress symbolsInProgress) {
+    @Override
+    public boolean validate(String romanNumber) {
+        checkNotNull(romanNumber);
+
+        RomanSymbolsInProgress symbolsInProgress = null;
+        char[] symbols = romanNumber.toCharArray();
+        for (char symbol : symbols) {
+            symbolsInProgress = RomanSymbolsInProgressFactory.create(
+                    symbolsInProgress, RomanSymbol.fromCharacter(symbol));
+            if (!validate(symbolsInProgress)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean validate(RomanSymbolsInProgress symbolsInProgress) {
         checkNotNull(symbolsInProgress, "Cannot validate from a null symbolsInProgress");
 
         RomanSymbol lastBeforePreviousSymbol = symbolsInProgress.getLastBeforePreviousSymbol();

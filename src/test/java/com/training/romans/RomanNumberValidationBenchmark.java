@@ -31,18 +31,16 @@ public class RomanNumberValidationBenchmark {
         double resultNano = (finalTimeNano - initialTimeNano);
         double resultMillis = (finalTimeMillis - initialTimeMillis);
 
-        System.out.println("Initial time in nano seconds: " + initialTimeNano);
-        System.out.println("Final time in nano seconds: " + finalTimeNano);
-        System.out.println("________________________________________");
-        System.out.println("Result in nano seconds: " + resultNano + " Nano seconds");
-        System.out.println("Result in seconds: " + resultNano / 1000000000 + " Seconds");
-        System.out.println("_____________________________________________________________________________");
-        System.out.println("_____________________________________________________________________________");
-        System.out.println("Initial time in milli seconds: " + initialTimeMillis);
-        System.out.println("Final time in milli seconds: " + finalTimeMillis);
-        System.out.println("________________________________________");
-        System.out.println("Result in milli seconds: " + resultMillis + " Nano seconds");
-        System.out.println("Result in seconds: " + resultMillis / 1000 + " Seconds");
+        System.out.println("Initial time in nano seconds: " + initialTimeNano +
+                "\t\t\t" + "Initial time in milli seconds: " + initialTimeMillis);
+        System.out.println("Final time in nano seconds: " + finalTimeNano +
+                "\t\t\t" + "Final time in milli seconds: " + finalTimeMillis);
+        System.out.println("_____________________________________________________" +
+                "_____________________________________________________");
+        System.out.println("Result in nano seconds: " + resultNano + " Nano seconds" +
+                "\t\t" + "Result in milli seconds: " + resultMillis + " Nano seconds");
+        System.out.println("Result in seconds: " + resultNano / 1000000000 + " Seconds" +
+                "\t\t\t\t\t" + "Result in seconds: " + resultMillis / 1000 + " Seconds");
 
     }
 }
