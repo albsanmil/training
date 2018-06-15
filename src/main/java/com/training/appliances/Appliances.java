@@ -1,16 +1,20 @@
 package com.training.appliances;
 
+import com.training.appliances.enums.ApplianceType;
+
+import static com.training.appliances.enums.ApplianceType.*;
+
 public class Appliances {
 
     private static int total;
 
-    private String kind;
+    private ApplianceType kind;
     private String brand;
     private String model;
     private float price;
     private String color;
 
-    public Appliances(String kind, String brand, String model, float price, String color) {
+    public Appliances(ApplianceType kind, String brand, String model, float price, String color) {
         this.kind = kind;
         this.brand = brand;
         this.model = model;
@@ -23,22 +27,22 @@ public class Appliances {
         System.out.println(kind);
     }
 
-    public static float discount(String kind) {
-        if (kind.equals("Fridge"))
+    public static float discount(ApplianceType kind) {
+        if (FRIDGE.equals(kind))
             return 10.0F / 100;
-        else if (kind.equals("Dishwasher"))
+        else if (DISHWASHER.equals(kind))
             return 12.5F / 100;
-        else if (kind.equals("Washing machine"))
+        else if (WASHING_MACHINE.equals(kind))
             return 15.0F / 100;
         else
             return 0.0F;
     }
 
-    public String getKind() {
+    public ApplianceType getKind() {
         return kind;
     }
 
-    public void setKind(String kind) {
+    public void setKind(ApplianceType kind) {
         this.kind = kind;
     }
 
